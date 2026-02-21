@@ -1,18 +1,24 @@
-function cria_player()
+//Gerando o Gemaplys
+function scr_player_layer()
 {
-	//Se o player não existe
-    if (!instance_exists(obj_player))
-    {
-		//Ele cria o player
-        var _lay = layer_create(-1000, "Player");
-        instance_create_layer(100, 100, _lay, obj_player);
+	//Gerando o player numa profundidade
+	if (!instance_exists(obj_player))
+	{
+		var _depth = -1000
 		
-		//se a camera não existe
-        if (!instance_exists(obj_camera))
-        {
-			//Ela cria a camera
-            var _lay_camera = layer_create(-10000, "Camera");
-            instance_create_layer(x, y, _lay_camera, obj_camera);
-        }
-    }
+		var _gema = instance_create_depth(267, 69, _depth, obj_player) ;
+	}
+	//Gerando a Camera
+	if (instance_exists(obj_player))
+	{
+		with (obj_player)
+		{
+			var _depth_camera = -10000 ;
+			
+			if (!instance_exists(obj_camera))
+			{
+				instance_create_depth(x, y, _depth_camera, obj_camera) ;
+			}
+		}
+	}
 }
