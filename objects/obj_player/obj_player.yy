@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_teste1",
+  "%Name":"obj_player",
   "eventList":[],
   "managed":true,
-  "name":"obj_teste1",
+  "name":"obj_player",
   "overriddenProperties":[],
   "parent":{
-    "name":"Testes",
-    "path":"folders/Objects/Testes.yy",
+    "name":"Player",
+    "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_player",
+    "path":"sprites/spr_player/spr_player.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
