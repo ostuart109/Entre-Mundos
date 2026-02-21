@@ -22,7 +22,7 @@
   },
   "name":"Entre-Mundos",
   "resources":[
-    {"id":{"name":"obj_teste","path":"objects/obj_teste/obj_teste.yy",},},
+    {"id":{"name":"obj_teste1","path":"objects/obj_teste1/obj_teste1.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "resourceType":"GMProject",
