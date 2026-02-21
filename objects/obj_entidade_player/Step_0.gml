@@ -2,6 +2,4 @@
 
 movimentacao() ;
 
-
-
 #endregion

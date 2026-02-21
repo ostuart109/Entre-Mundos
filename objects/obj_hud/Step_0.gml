@@ -1,6 +1,6 @@
 #region Usando Métodos
 
-//Camera
-camera() ;
+//Player e Camera
+cria_player() ;
 
 #endregion

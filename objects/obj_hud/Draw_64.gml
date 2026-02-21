@@ -1,0 +1,2 @@
+//FPS
+desenha_fps() ;

@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Objects","folderPath":"folders/Objects.yy","name":"Objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"HUD","folderPath":"folders/Objects/HUD.yy","name":"HUD","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Mecanicas","folderPath":"folders/Objects/Mecanicas.yy","name":"Mecanicas","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -40,6 +41,7 @@
     {"id":{"name":"obj_teste2","path":"objects/obj_teste2/obj_teste2.yy",},},
     {"id":{"name":"Rm_1","path":"rooms/Rm_1/Rm_1.yy",},},
     {"id":{"name":"rm_hud","path":"rooms/rm_hud/rm_hud.yy",},},
+    {"id":{"name":"scr_player","path":"scripts/scr_player/scr_player.yy",},},
     {"id":{"name":"bg_rm_1","path":"sprites/bg_rm_1/bg_rm_1.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
   ],

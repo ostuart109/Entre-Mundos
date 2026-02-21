@@ -1,15 +1,22 @@
 #region Cria Métodos
 
-//Camera
-camera = function()
+//FPS
+desenha_fps = function()
 {
-	//Se o player existe
-	if (instance_exists(obj_player))
-	{
-		//Cria o objeto camera
-		var _lay	= layer_create(-100, "Player")
-		instance_create_layer(x, y, _lay, obj_camera) ;
-	}
+	//Definindo a cor
+	draw_set_colour(c_aqua) ;
+
+	//60 FPS
+	draw_text(20, 20, fps) ;
+	
+	//Real FPS
+	draw_text(20, 40, fps_real) ;
+
+	//barrinha Debug
+	show_debug_overlay(true) ;
+
+	//Resetando
+	draw_set_colour(-1) ;
 }
 
 #endregion
