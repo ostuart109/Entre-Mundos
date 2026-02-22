@@ -54,7 +54,7 @@ cria_camera = function()
 		var c_y = camera_get_view_y(view_camera[0]) ;
 	
 		//Posição da Camera
-		camera_set_view_pos(view_camera[0], lerp(c_x, _x1, view_spd), lerp(c_y, _y1, view_spd)) ;
+		camera_set_view_pos(view_camera[0], clamp(_x1, c_x, _x1), clamp(_y1, c_y, _y1)) ;
 	}	
 }
 

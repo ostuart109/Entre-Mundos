@@ -51,6 +51,7 @@
     {"id":{"name":"rm_hud","path":"rooms/rm_hud/rm_hud.yy",},},
     {"id":{"name":"scr_player","path":"scripts/scr_player/scr_player.yy",},},
     {"id":{"name":"bg_rm_1","path":"sprites/bg_rm_1/bg_rm_1.yy",},},
+    {"id":{"name":"bg_rm_2","path":"sprites/bg_rm_2/bg_rm_2.yy",},},
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},},
     {"id":{"name":"spr_collision_mask","path":"sprites/spr_collision_mask/spr_collision_mask.yy",},},
     {"id":{"name":"spr_player_andando","path":"sprites/spr_player_andando/spr_player_andando.yy",},},
