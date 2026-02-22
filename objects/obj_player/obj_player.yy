@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_andando",
-    "path":"sprites/spr_player_andando/spr_player_andando.yy",
+    "name":"spr_player",
+    "path":"sprites/spr_player/spr_player.yy",
   },
   "spriteMaskId":{
     "name":"spr_collision_mask",
