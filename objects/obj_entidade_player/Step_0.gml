@@ -6,5 +6,7 @@
 //Animações Gemaplys
 animacao() ;
 
+viaja_tempo() ;
+
 
 #endregion

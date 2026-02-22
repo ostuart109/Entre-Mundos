@@ -95,7 +95,7 @@ estado_parado    = function()
 }
 	
 //Segundo Estado
-estado_movendo = function()
+estado_movendo	= function()
 {
 	//ele mostra o estado dele movendo
 	estado_txt = "movendo" ;
@@ -123,6 +123,22 @@ estado_movendo = function()
 	{
 	    //estou parado
 	    estado = estado_parado ;
+	}
+}
+
+//Terceiro Estado
+viaja_tempo		= function()
+{
+	if (keyboard_check_released(ord("F")))
+	{
+		if (room == Rm_1)
+		{
+			room_goto(Rm_2)
+		}
+		else
+		{
+			room_goto(Rm_1) ;
+		}
 	}
 }
 
