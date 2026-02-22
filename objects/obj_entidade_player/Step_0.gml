@@ -4,7 +4,7 @@
 //colisao() ;
 
 //Animações Gemaplys
-//animacao() ;
+animacao() ;
 
 
 #endregion

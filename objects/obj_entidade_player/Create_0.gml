@@ -26,7 +26,7 @@ sprites = [
             //1    - Cima
             //2    - Esquerda
             //3    - Baixo
-            [],
+            [spr_player, spr_player, spr_player, spr_player],
 			
 //vetor 1
             //Sprites Walking
@@ -34,7 +34,7 @@ sprites = [
             //1    - Cima
             //2    - Esquerda
             //3    - Baixo
-            []
+            [spr_player_andando, spr_player_andando, spr_player_andando, spr_player_andando]
 			];
 
 //Essa variavel vai alterar as sprites de parado, movimentando e etc.
@@ -65,7 +65,7 @@ estado_parado    = function()
 	estado_txt = "parado" ;
 	
 	//meu vetor parado
-	//sprites_index = 0 ;
+	sprites_index = 0 ;
 		
 	//Ficando parado
 	velh = 0 ;
@@ -80,7 +80,7 @@ estado_parado    = function()
 	//Minha sprite vai ser igual ao meu vetor 0 (parado)
 	//[sprites_index]    - vetor parado
 	//[face]            - a face que estou olhando
-	//sprite = sprites[sprites_index][face] ;
+	sprite = sprites[sprites_index][face] ;
 	
 	velh = (_right - _left) * max_vel ;
 	velv = (_down  - _up)   * max_vel ;
@@ -101,12 +101,12 @@ estado_movendo = function()
 	estado_txt = "movendo" ;
 	
 	//meu vetor movendo
-	//sprites_index = 1 ;	
+	sprites_index = 1 ;	
 	
 	//Minha sprite vai ser igual ao meu vetor 1 (andando)
 	//[sprites_index]    - vetor andando
 	//[face]            - a face que estou olhando
-	//sprite = sprites[sprites_index][face] ;	
+	sprite = sprites[sprites_index][face] ;	
 	
 	//Variáveis de Movimento
 	var _up		= keyboard_check(vk_up) ;
@@ -210,7 +210,7 @@ animacao		= function()
 	    face    = 2 ;
 		
 		//E a escala x da imagem é 1
-	    xscale  = 1 ;
+	    xscale  = -1 ;
 	}
 	//Se ir pra direita
 	if (_right)
