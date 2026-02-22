@@ -35,8 +35,8 @@
     "path":"sprites/spr_player_andando/spr_player_andando.yy",
   },
   "spriteMaskId":{
-    "name":"spr_collision_mask_player",
-    "path":"sprites/spr_collision_mask_player/spr_collision_mask_player.yy",
+    "name":"spr_collision_mask",
+    "path":"sprites/spr_collision_mask/spr_collision_mask.yy",
   },
   "visible":true,
 }

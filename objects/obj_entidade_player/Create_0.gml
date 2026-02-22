@@ -66,6 +66,8 @@ estado_parado    = function()
 	
 	//meu vetor parado
 	sprites_index = 0 ;
+	
+	image_speed = 1 ;
 		
 	//Ficando parado
 	velh = 0 ;
@@ -102,6 +104,8 @@ estado_movendo = function()
 	
 	//meu vetor movendo
 	sprites_index = 1 ;	
+	
+	image_speed = 1 ;
 	
 	//Minha sprite vai ser igual ao meu vetor 1 (andando)
 	//[sprites_index]    - vetor andando
