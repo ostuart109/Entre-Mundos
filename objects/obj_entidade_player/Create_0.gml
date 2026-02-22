@@ -3,7 +3,7 @@
 //Variáveis velocidade
 velh	= 0 ;
 velv	= 0 ;
-max_vel	= 2 ;
+max_vel	= 3 ;
 
 //====================== Animações =======================
 
@@ -133,81 +133,47 @@ estado = estado_parado ;
 
 #region Criando Métodos
 
-//Colisão
-colisao			= function()  
+colisao = function()
 {
-	//ele mostra o estado dele movendo
-	estado_txt = "colisao" ;
-	
-	var _move_x	= keyboard_check(vk_right) - keyboard_check(vk_left) ;
-	var _move_y	= keyboard_check(vk_down) - keyboard_check(vk_up) ;
-	
-	move_and_collide(_move_x * 4, _move_y * 4, obj_colisao) ;
-	
-	/*
-	//================ Colisão Horizontal ===================
-	
 	//Colisão Horizontal
 	if (place_meeting(x + velh, y, obj_colisao))
 	{
-		//Pegando os dados da parede que eu vou colidir
-		var _parede = instance_place(x + velh, y, obj_colisao) ;
-			
-		//Se o valor da parede for valido
-		if (_parede)
-		{	
-			//Colisão Direita
-			if (velh > 0)
-			{
-				//Vou grudar na esquerda da parede
-				x = _parede.bbox_left - (sprite_width/2) ;
-			}
-			else //Colisão Esquerda
-			{
-				//Vou grudar na direita da parede
-				x = _parede.bbox_right + (sprite_width/2) ;
-			}
-		}
-		//Velocidade Horizontal zera
-		velh = 0 ;
+		//Pegando o sinal da minha velocidade horizontal
+		var _velh = sign(velh) ;
 		
-		//Zerar a minha velocidade horizontal
-		estado = estado_parado
+		//Enquanto eu não estar colidindo com a parede
+		while(!place_meeting(x + velh, y, obj_colisao))
+		{
+			//Avanço 1 pixel
+			x += _velh ;
+		}
+		
+		//Isso só roda quando o while deixar de rodar
+		//Vou zerar a minha velh
+		velh = 0 ;
 	}
-	//O X do player se movimenta 
-	//conforme o valor do velh
+	
 	x += velh ;
 	
-	//================ Colisão Vertical =====================
-
-	//Pegando os dados da parede que eu vou colidir
-	var _parede = instance_place(x, y + velv, obj_colisao) ;
-
-	//Se o valor da parede for valido	
-	if (_parede)
+	//Colisão Vertical
+	if (place_meeting(x, y + velv, obj_colisao))
 	{
-		//Descendo
-		if (velv > 0)
-		{
-			//Vou grudar no topo da parede
-			y = _parede.bbox_top - (sprite_height/2) ;
-		}
-		//Subindo
-		else if (velv < 0)
-		{
-			//Vou grudar na parte de baixo da parede
-			y = _parede.bbox_bottom + (sprite_height/2) ;
-		}
-		//Velocidade Vertical zera
-		velv = 0 ;
+		//Pegando o sinal da minha velocidade horizontal
+		var _velv = sign(velv) ;
 		
-		//O estado se torna o estado parado
-		estado = estado_parado
-	}		
-	//O Y do player se movimenta 
-	//conforme o valor do velv
-	y += velv ;	
-	*/
+		//Enquanto eu não estar colidindo com a parede
+		while(!place_meeting(x, y + velv, obj_colisao))
+		{
+			//Avanço 1 pixel
+			y += _velv ;
+		}
+		
+		//Isso só roda quando o while deixar de rodar
+		//Vou zerar a minha velh
+		velv = 0 ;		
+	}
+	
+	y += velv ;
 }
 
 animacao		= function()
@@ -319,5 +285,3 @@ desenha_estado	= function()
 }
 
 #endregion
-
-move_and_collide()

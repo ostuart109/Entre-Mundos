@@ -48,6 +48,7 @@
     {"id":{"name":"scr_player","path":"scripts/scr_player/scr_player.yy",},},
     {"id":{"name":"bg_rm_1","path":"sprites/bg_rm_1/bg_rm_1.yy",},},
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},},
+    {"id":{"name":"spr_collision_mask_player","path":"sprites/spr_collision_mask_player/spr_collision_mask_player.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
   ],
   "resourceType":"GMProject",
