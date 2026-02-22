@@ -19,4 +19,18 @@ desenha_fps = function()
 	draw_set_colour(-1) ;
 }
 
+//Desesnha o Tempo
+desenha_tempo = function()
+{
+	if (room == Rm_1)
+	{
+		draw_text(550, 20, "Presente")
+	}
+
+	if (room == Rm_2)
+	{
+		draw_text(550, 20, "Passado")
+	}	
+}
+
 #endregion

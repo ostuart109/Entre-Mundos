@@ -52,7 +52,7 @@
     ],
     "top":0,
   },
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Player Parado",
     "path":"folders/Sprites/Player/Player Parado.yy",
@@ -135,7 +135,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":23,
-    "yorigin":101,
+    "yorigin":50,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

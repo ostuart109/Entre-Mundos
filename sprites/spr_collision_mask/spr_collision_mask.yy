@@ -23,7 +23,7 @@
   ],
   "name":"spr_collision_mask",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Collision Mask",
     "path":"folders/Sprites/Player/Collision Mask.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":19,
-    "yorigin":99,
+    "yorigin":49,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

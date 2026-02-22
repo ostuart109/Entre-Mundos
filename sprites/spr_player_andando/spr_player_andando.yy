@@ -26,7 +26,7 @@
   ],
   "name":"spr_player_andando",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Player Andando",
     "path":"folders/Sprites/Player/Player Andando.yy",
@@ -88,7 +88,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":24,
-    "yorigin":100,
+    "yorigin":50,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
