@@ -46,7 +46,7 @@ sprites_index = 0 ;
 estado = noone ;
 
 //Texto do estado
-estado_txt = "parado" ;
+estado_txt = noone ;
 
 //====================== Mapeamento ======================
 
@@ -118,6 +118,7 @@ estado_movendo = function()
 	velh = (_right - _left) * max_vel ;
 	velv = (_down  - _up)   * max_vel ;
 	
+	//Saindo do estado movendo se a velocidade é 0
 	if (abs(velv) <= 0.2 and abs(velh) <= 0.2)
 	{
 	    //estou parado
@@ -138,6 +139,12 @@ colisao			= function()
 	//ele mostra o estado dele movendo
 	estado_txt = "colisao" ;
 	
+	var _move_x	= keyboard_check(vk_right) - keyboard_check(vk_left) ;
+	var _move_y	= keyboard_check(vk_down) - keyboard_check(vk_up) ;
+	
+	move_and_collide(_move_x * 4, _move_y * 4, obj_colisao) ;
+	
+	/*
 	//================ Colisão Horizontal ===================
 	
 	//Colisão Horizontal
@@ -153,12 +160,12 @@ colisao			= function()
 			if (velh > 0)
 			{
 				//Vou grudar na esquerda da parede
-				x = _parede.bbox_left - sprite_width/2 ;
+				x = _parede.bbox_left - (sprite_width/2) ;
 			}
 			else //Colisão Esquerda
 			{
 				//Vou grudar na direita da parede
-				x = _parede.bbox_right + sprite_width/2 ;
+				x = _parede.bbox_right + (sprite_width/2) ;
 			}
 		}
 		//Velocidade Horizontal zera
@@ -183,13 +190,13 @@ colisao			= function()
 		if (velv > 0)
 		{
 			//Vou grudar no topo da parede
-			y = _parede.bbox_top ;
+			y = _parede.bbox_top - (sprite_height/2) ;
 		}
 		//Subindo
 		else if (velv < 0)
 		{
 			//Vou grudar na parte de baixo da parede
-			y = _parede.bbox_bottom + sprite_height ;
+			y = _parede.bbox_bottom + (sprite_height/2) ;
 		}
 		//Velocidade Vertical zera
 		velv = 0 ;
@@ -200,6 +207,7 @@ colisao			= function()
 	//O Y do player se movimenta 
 	//conforme o valor do velv
 	y += velv ;	
+	*/
 }
 
 animacao		= function()
@@ -311,3 +319,5 @@ desenha_estado	= function()
 }
 
 #endregion
+
+move_and_collide()
