@@ -1,5 +1,6 @@
 #region Usando Métodos
 
-movimentacao() ;
+//Animações Gemaplys
+//animacao() ;
 
 #endregion

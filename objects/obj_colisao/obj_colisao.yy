@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_teste1",
+  "%Name":"obj_colisao",
   "eventList":[],
   "managed":true,
-  "name":"obj_teste1",
+  "name":"obj_colisao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Testes",
-    "path":"folders/Objects/Testes.yy",
+    "name":"Colisão",
+    "path":"folders/Objects/Colisão.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_colisao",
+    "path":"sprites/spr_colisao/spr_colisao.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
