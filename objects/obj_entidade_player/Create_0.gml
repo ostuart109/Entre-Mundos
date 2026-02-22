@@ -131,11 +131,11 @@ viaja_tempo		= function()
 {
 	if (keyboard_check_released(ord("F")))
 	{
-		if (room == Rm_1)
+		if (room == Rm_1 and (!place_meeting(x, y, obj_pode_viajar)))
 		{
 			room_goto(Rm_2)
 		}
-		else
+		else if (room == Rm_2 and (!place_meeting(x, y, obj_pode_viajar)))
 		{
 			room_goto(Rm_1) ;
 		}
@@ -281,6 +281,32 @@ animacao		= function()
 	    //Perdendo a velocidade
 	    velh = 0 ;
 	    velv = 0 ;
+	}	
+}
+
+//Desesnha o Tempo
+desenha_tempo = function()
+{
+	if (room == Rm_1)
+	{
+		draw_text(550, 20, "Presente")
+		
+		if (place_meeting(x, y, obj_pode_viajar))
+		{
+			draw_text(camera_get_view_width(view_camera[0])/2, camera_get_view_height(view_camera[0])/3, "Nao posso viajar aqui...")
+		}
+		
+		
+	}
+
+	if (room == Rm_2)
+	{
+		draw_text(550, 20, "Passado")
+		
+		if (place_meeting(x, y, obj_pode_viajar))
+		{
+			draw_text(camera_get_view_width(view_camera[0])/2, camera_get_view_height(view_camera[0])/3, "Nao posso viajar aqui...")
+		}
 	}	
 }
 
