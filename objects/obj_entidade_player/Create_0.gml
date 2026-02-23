@@ -295,8 +295,6 @@ desenha_tempo = function()
 		{
 			draw_text(camera_get_view_width(view_camera[0])/2, camera_get_view_height(view_camera[0])/3, "Nao posso viajar aqui...")
 		}
-		
-		
 	}
 
 	if (room == Rm_2)
