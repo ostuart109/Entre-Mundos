@@ -16,7 +16,6 @@
     {"$GMFolder":"","%Name":"Mecanicas","folderPath":"folders/Objects/Mecanicas.yy","name":"Mecanicas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Camera","folderPath":"folders/Objects/Mecanicas/Camera.yy","name":"Camera","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Objects/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Testes","folderPath":"folders/Objects/Testes.yy","name":"Testes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Viaja Tempo","folderPath":"folders/Objects/Viaja Tempo.yy","name":"Viaja Tempo","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Rooms","folderPath":"folders/Rooms.yy","name":"Rooms","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"HUD","folderPath":"folders/Rooms/HUD.yy","name":"HUD","resourceType":"GMFolder","resourceVersion":"2.0",},
