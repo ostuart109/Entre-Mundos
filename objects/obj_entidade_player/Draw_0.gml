@@ -24,7 +24,7 @@ opacidade_barra -= 0.02;
 
 //Mudando a barra pra Yellow na metade
 if delay_tempo < delay_tempo_max / 2
-cor_barra = c_yellow
+cor_barra = c_yellow 
 
 //Mudando a barra para aqua lá no finalzinho
 if delay_tempo < delay_tempo_max / 20
