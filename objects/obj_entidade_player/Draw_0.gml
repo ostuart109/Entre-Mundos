@@ -14,9 +14,6 @@ draw_sprite_ext(sprite, image_index, x, y, xscale, image_yscale, image_angle, im
 //Desenhando o Atual Estado do Player
 desenha_estado() ;
 
-//Desenhando o Tempo/Época atual
-desenha_tempo() ;
-
 //========================================================
 
 #endregion
