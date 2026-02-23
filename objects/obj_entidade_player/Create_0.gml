@@ -67,27 +67,14 @@ estado_parado    = function()
 	//meu vetor parado
 	sprites_index = 0 ;
 		
-	//Ficando parado
-	velh = 0 ;
-	velv = 0 ;
-		
-	//Variáveis de Movimento
-	var _up		= keyboard_check(vk_up) ;
-	var _left	= keyboard_check(vk_left) ;
-	var _down	= keyboard_check(vk_down) ;
-	var _right	= keyboard_check(vk_right) ;
-
 	//Minha sprite vai ser igual ao meu vetor 0 (parado)
 	//[sprites_index]    - vetor parado
 	//[face]            - a face que estou olhando
 	sprite = sprites[sprites_index][face] ;
 	
-	velh = (_right - _left) * max_vel ;
-	velv = (_down  - _up)   * max_vel ;
-	
 	//saindo do estado de parado
-	//Se estou fazendo qualquer um deles
-	if ((_up xor _down) or (_left xor _right))
+	//Se a velocidade é maior que 0.1, mudo para estado de movendo
+	if (abs(velh) > 0.1 or abs(velv) > 0.1)
 	{
 	    //estou me movendo
 	    estado = estado_movendo ;
@@ -108,18 +95,8 @@ estado_movendo	= function()
 	//[face]            - a face que estou olhando
 	sprite = sprites[sprites_index][face] ;	
 	
-	//Variáveis de Movimento
-	var _up		= keyboard_check(vk_up) ;
-	var _left	= keyboard_check(vk_left) ;
-	var _down	= keyboard_check(vk_down) ;
-	var _right	= keyboard_check(vk_right) ;
-
-	// Aplica velocidade com base nas teclas
-	velh = (_right - _left) * max_vel ;
-	velv = (_down  - _up)   * max_vel ;
-	
-	//Saindo do estado movendo se a velocidade é 0
-	if (abs(velv) <= 0.2 and abs(velh) <= 0.2)
+	//Saindo do estado movendo se a velocidade é quase 0
+	if (abs(velv) <= 0.1 and abs(velh) <= 0.1)
 	{
 	    //estou parado
 	    estado = estado_parado ;
@@ -203,7 +180,7 @@ animacao		= function()
 	var _right	= keyboard_check(vk_right) ;
 
 	//Ajustando a face	
-	//lembrando, a ordem também vai definir as prioridades
+	//A ordem vai definir as prioridades
 	//Se ir para cima
 	if (_up)
 	{	
@@ -238,8 +215,8 @@ animacao		= function()
 		//E a escala x da imagem é 1
 	    xscale	= 1 ;
 	}
-	//Note que dei prioridade pro "right"
-	//então, se eu apertar todos ao mesmo tempo
+	
+	//Se eu apertar todos ao mesmo tempo
 	//ele da prioridade a direita
 	
 	//Se voce clicar pra cima/baixo
