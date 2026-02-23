@@ -22,6 +22,7 @@
     {"$GMFolder":"","%Name":"Salas","folderPath":"folders/Rooms/Salas.yy","name":"Salas","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Scripts/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Sistema de Barra","folderPath":"folders/Scripts/Sistema de Barra.yy","name":"Sistema de Barra","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Background","folderPath":"folders/Sprites/Background.yy","name":"Background","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Colisão","folderPath":"folders/Sprites/Colisão.yy","name":"Colisão","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -36,7 +37,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"Entre-Mundos",
   "resources":[
@@ -49,6 +50,7 @@
     {"id":{"name":"Rm_1","path":"rooms/Rm_1/Rm_1.yy",},},
     {"id":{"name":"Rm_2","path":"rooms/Rm_2/Rm_2.yy",},},
     {"id":{"name":"rm_hud","path":"rooms/rm_hud/rm_hud.yy",},},
+    {"id":{"name":"scr_barra","path":"scripts/scr_barra/scr_barra.yy",},},
     {"id":{"name":"scr_player","path":"scripts/scr_player/scr_player.yy",},},
     {"id":{"name":"bg_rm_1","path":"sprites/bg_rm_1/bg_rm_1.yy",},},
     {"id":{"name":"bg_rm_2","path":"sprites/bg_rm_2/bg_rm_2.yy",},},

@@ -3,7 +3,7 @@
 //Colisão
 //colisao() ;
 
-//Animações Player
+//Animações Gemaplys
 animacao() ;
 
 viaja_tempo() ;
@@ -18,3 +18,6 @@ if (sprite_index != sprite)
     sprite_index = sprite;
     image_index = 0;
 }
+
+//Diminuindo o Delay de tempo
+delay_tempo--;

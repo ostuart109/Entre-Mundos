@@ -5,6 +5,16 @@ velh	= 0 ;
 velv	= 0 ;
 max_vel	= 3 ;
 
+//Delay do Sistema de viagem temporal
+delay_tempo_max = 60 * 2; //Multiplicando o valor por segundos.
+delay_tempo = delay_tempo_max; //Aplicando delay
+
+//Configs de Barra
+opacidade_barra_max = 0.8
+opacidade_barra = opacidade_barra_max
+cor_barra = c_red
+
+
 //====================== Animações =======================
 
 //0    - Direita
@@ -106,15 +116,24 @@ estado_movendo	= function()
 //Terceiro Estado
 viaja_tempo		= function()
 {
-	if (keyboard_check_released(ord("F")))
+	if (keyboard_check_released(ord("F")) xor keyboard_check_released(vk_space)) and delay_tempo <= 0
 	{
 		if (room == Rm_1 and (!place_meeting(x, y, obj_pode_viajar)))
 		{
 			room_goto(Rm_2)
+			
+			delay_tempo = delay_tempo_max //Resetanto o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+			
 		}
 		else if (room == Rm_2 and (!place_meeting(x, y, obj_pode_viajar)))
 		{
 			room_goto(Rm_1) ;
+			
+			delay_tempo = delay_tempo_max //Resetando o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
 		}
 	}
 }

@@ -17,3 +17,15 @@ desenha_estado() ;
 //========================================================
 
 #endregion
+
+//Fazendo a barra sumir (Que aberração eu criei? Mas funciona né)
+if delay_tempo == 0
+opacidade_barra -= 0.02;
+
+if delay_tempo < delay_tempo_max / 2
+cor_barra = c_aqua
+
+
+
+//Desenhando a barra
+barra_recarga(x - 30, y - 60, 64, 4, delay_tempo, delay_tempo_max, cor_barra, opacidade_barra);
