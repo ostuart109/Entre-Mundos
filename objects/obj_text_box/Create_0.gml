@@ -101,9 +101,6 @@ cria_dialogo = function(_dialogo)
 	var _qtd_pag	= array_length(_dialogo.texto) - 1;
 	
 	//================ Caixa de Texto Variaveis =============
-
-	//Fonte
-	draw_set_font(fnt_text_box) ;
 	
 	//Largura e Altura da GUI
 	//Static - Faz com que elas não mudem de valor e chamo elas só uma vez
@@ -213,6 +210,9 @@ cria_dialogo = function(_dialogo)
 	
 	//=======================================================
 
+	//Fonte
+	draw_set_font(fnt_text_box) ;
+	
 	//Desenhando a caixa de texto - USANDO caixa_frame
 	draw_sprite_ext(spr_text_box, caixa_frame, 70, _yy - 10, _escala_x, _escala_y, image_angle, c_white, image_alpha) ;
 	/*
@@ -308,10 +308,10 @@ cria_dialogo = function(_dialogo)
 		//_margem - Separação de texto
 		draw_text_ext(100, _yy - 3, _txt_atual, _margem, _gui_w - 180 ) ;
 					  //+ _ret_larg							         - _ret_larg
-		//Resetando
-		draw_set_font(-1) ;
 	}
-
+	
+	//Resetando
+	draw_set_font(-1) ;
 }
 
 //liberando a surface quando o objeto for destruído

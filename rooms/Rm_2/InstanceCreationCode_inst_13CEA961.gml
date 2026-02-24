@@ -2,7 +2,7 @@
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["O que foi isso???", "Eu consegui viajar entre o passado e o presente???"],
+	texto	: ["Isso!!!", "Eu sabia que era possível viajar entre o passado e o presente!!"],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto

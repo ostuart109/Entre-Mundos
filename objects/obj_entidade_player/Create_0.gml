@@ -65,6 +65,11 @@ estado_txt = noone ;
 //inicia sem estar com dialogo
 npc_dialogo	= noone ;
 
+//======================== Vida ==========================
+
+//Frame da animação de destruição (image_index manual)
+anim_destroi_frame = 0;
+
 //====================== Mapeamento ======================
 
 
@@ -159,6 +164,9 @@ viaja_tempo		= function()
 	{
 		if (room == Rm_1 and (!place_meeting(x, y, obj_pode_viajar)))
 		{
+			//Cria o portal
+			cria_portal() ;
+			
 			room_goto(Rm_2)
 			
 			delay_tempo = delay_tempo_max //Resetanto o delay
@@ -168,6 +176,9 @@ viaja_tempo		= function()
 		}
 		else if (room == Rm_2 and (!place_meeting(x, y, obj_pode_viajar)))
 		{
+			//Cria o portal
+			cria_portal() ;
+			
 			room_goto(Rm_1) ;
 			
 			delay_tempo = delay_tempo_max //Resetando o delay
@@ -407,6 +418,85 @@ desenha_estado	= function()
 	//Centralizando
 	draw_set_valign(-1) ;
 	draw_set_halign(-1) ;
+}
+
+//Isso cria o portal
+cria_portal = function()
+{
+	//Layer do Portal
+	var _layer_portal = layer_create(depth + 1, "Portal");
+			
+	//Cria o Portal
+	instance_create_layer(x,y, _layer_portal, obj_portal) ;
+			
+	//toca o som do portal
+	audio_play_sound(snd_portal, 5, 0) ;
+}
+
+//Vida
+vida_player = function()
+{
+	//Se estiver perdendo vida
+	if (global.vida < global.vida_anterior)
+	{
+		//Troca o image_speed pela velocidade do próprio sprite
+		anim_destroi_frame += sprite_get_speed(spr_vida_destroi) / game_get_speed(gamespeed_fps);
+	    
+	    //Quando a animação terminar
+	    if (anim_destroi_frame >= sprite_get_number(spr_vida_destroi))
+	    {
+	    	//Reseta o frame
+	        anim_destroi_frame = 0;
+	        //Atualiza a vida anterior
+	        global.vida_anterior = global.vida;
+			
+			//Som levando dano
+			audio_play_sound(snd_vida_pop, 5, 0) ;
+	    }
+	}
+	
+	//Se a vida chegar a 0 
+	//-1 - Evita que o player morra no ultimo coração
+	if (global.vida <= -1)
+	{
+		//Ele se destroi
+		instance_destroy() ;
+	}	
+}
+
+//Desenha a vida
+desenha_vida = function()
+{
+	// Desenhando a vida
+	//Contador de posição dos corações
+	var _indice = 0; 
+	
+	//Posição do X
+	var _pos_x = 20 ;
+	
+	//Posição do Y
+	var _pos_y = 80 ;
+	
+	//Espaçamento entre os corações
+	var _espaco = 32 ;
+	
+	//Repete uma vez pra cada ponto de vida
+	for (var _vida = global.vida; _vida > 0; _vida -= 1) 
+	{
+		//Desenha o coração
+		//X = posição inicial + (índice * espaçamento)
+	    draw_sprite(spr_vida, image_index, _pos_x + (_indice * _espaco), _pos_y); 
+		
+		//Avança para a próxima posição
+	    _indice += 1; 
+	}
+	
+	//Desenha a animação de destruição nos corações perdidos
+	for (var _i = global.vida; _i < global.vida_anterior; _i += 1)
+	{
+		//Usa o frame manual (anim_destroi_frame) em vez do image_index do objeto
+		draw_sprite(spr_vida_destroi, floor(anim_destroi_frame), _pos_x + (_i * _espaco), _pos_y);
+	}
 }
 
 #endregion

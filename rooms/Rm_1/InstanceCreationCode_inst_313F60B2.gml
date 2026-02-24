@@ -2,7 +2,7 @@
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["Interessante!!"],
+	texto	: ["Interessante!"],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto

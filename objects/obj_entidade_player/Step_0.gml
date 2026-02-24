@@ -8,6 +8,9 @@ animacao() ;
 
 viaja_tempo() ;
 
+//Vida do Player
+vida_player() ;
+
 #endregion
 
 // Sincronizando o sprite_index para que o image_index respeite a quantidade de frames de cada sprite
@@ -41,3 +44,10 @@ else
 
 }
 
+//Checa se o objeto do Portal ta sendo destruído
+//if (keyboard_check(ord("T")))
+//{
+//	var _checa_portal	= instance_number(obj_portal) ;
+
+//	show_message(_checa_portal) ;	
+//}

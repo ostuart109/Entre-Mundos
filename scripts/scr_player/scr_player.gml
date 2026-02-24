@@ -1,4 +1,10 @@
-//Gerando o Gemaplys
+//Vida do player
+global.vida = 5 ; 
+
+//Vida Anterior é a vida do Player
+global.vida_anterior = global.vida;
+
+//Gerando o Player
 function scr_player_layer()
 {
 	//Gerando o player numa profundidade
