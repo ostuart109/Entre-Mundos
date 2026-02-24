@@ -1,8 +1,10 @@
 //====================== VELOCIDADE ======================
 
 //Variáveis velocidade
+
 velh	= 0 ;
 velv	= 0 ;
+
 max_vel	= 3 ;
 
 //Delay do Sistema de viagem temporal
@@ -65,6 +67,7 @@ npc_dialogo	= noone ;
 
 //====================== Mapeamento ======================
 
+
 //Mapeando as teclas
 keyboard_set_map(ord("W"), vk_up) ;		//Cima
 keyboard_set_map(ord("A"), vk_left) ;	//Baixo
@@ -83,6 +86,8 @@ estado_parado    = function()
 	////	// Sai da função sem processar movimento
 	//}
 	
+	
+	
 	//ele mostra o estado dele parado
 	estado_txt = "parado" ;
 	
@@ -98,8 +103,16 @@ estado_parado    = function()
 	//Se a velocidade é maior que 0.1, mudo para estado de movendo
 	if (abs(velh) > 0.1 or abs(velv) > 0.1)
 	{
+		if estado != estado_dialogo
+		{
+		
+		
 	    //estou me movendo
 	    estado = estado_movendo ;
+		
+		
+		}
+		
 	}
 }
 	
@@ -194,7 +207,10 @@ estado_dialogo = function()
 				
 			//Dialogo do objeto dialogo	
 			_obj_dialogo.player = id ;
-				
+			
+			//ligando
+			global.dialogo_aberto = true
+			
 			//Passando o dialogo do npc, para o obj_dialogo
 			with(npc_dialogo)
 			{
@@ -260,12 +276,15 @@ animacao		= function()
 {
 	//Sistema de animação
 	
+	if global.dialogo_aberto == false
+	{
 	//Variáveis de Movimentação
 	var _up		= keyboard_check(vk_up) ;
 	var _left	= keyboard_check(vk_left) ;
 	var _down	= keyboard_check(vk_down) ;
 	var _right	= keyboard_check(vk_right) ;
-
+	
+	
 	//Ajustando a face	
 	//A ordem vai definir as prioridades
 	//Se ir para cima
@@ -347,6 +366,8 @@ animacao		= function()
 	    velv = 0 ;
 	}	
 }
+}
+
 
 //Desesnha o Tempo
 desenha_tempo = function()

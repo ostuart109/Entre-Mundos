@@ -21,3 +21,22 @@ if (sprite_index != sprite)
 
 //Diminuindo o Delay de tempo
 delay_tempo--;
+
+//Zerando a velocidade se o dialogo estiver aberto
+if global.dialogo_aberto == true
+{
+
+velh = 0
+velv = 0
+
+estado = estado_parado
+
+
+}
+else
+{
+
+
+
+}
+

@@ -44,7 +44,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.2.213",
   },
   "name":"Entre-Mundos",
   "resources":[
@@ -64,6 +64,7 @@
     {"id":{"name":"rm_hud","path":"rooms/rm_hud/rm_hud.yy",},},
     {"id":{"name":"scr_barra","path":"scripts/scr_barra/scr_barra.yy",},},
     {"id":{"name":"scr_player","path":"scripts/scr_player/scr_player.yy",},},
+    {"id":{"name":"scr_variaveis","path":"scripts/scr_variaveis/scr_variaveis.yy",},},
     {"id":{"name":"bg_rm_1","path":"sprites/bg_rm_1/bg_rm_1.yy",},},
     {"id":{"name":"bg_rm_2","path":"sprites/bg_rm_2/bg_rm_2.yy",},},
     {"id":{"name":"spr_colisao","path":"sprites/spr_colisao/spr_colisao.yy",},},
