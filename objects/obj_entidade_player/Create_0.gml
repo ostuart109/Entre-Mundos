@@ -58,6 +58,11 @@ estado = noone ;
 //Texto do estado
 estado_txt = noone ;
 
+//====================== Text Box ========================
+
+//inicia sem estar com dialogo
+npc_dialogo	= noone ;
+
 //====================== Mapeamento ======================
 
 //Mapeando as teclas
@@ -71,6 +76,13 @@ keyboard_set_map(ord("D"), vk_right) ;	//Direita
 //Primeiro Estado
 estado_parado    = function()
 {
+	// SE ESTIVER EM DIÁLOGO, NÃO PROCESSAR INPUTS
+	if (estado == estado_dialogo)
+	{
+	    return; 
+		// Sai da função sem processar movimento
+	}
+	
 	//ele mostra o estado dele parado
 	estado_txt = "parado" ;
 	
@@ -94,6 +106,13 @@ estado_parado    = function()
 //Segundo Estado
 estado_movendo	= function()
 {
+	// SE ESTIVER EM DIÁLOGO, NÃO PROCESSAR INPUTS
+	if (estado == estado_dialogo)
+	{
+	    return; 
+		// Sai da função sem processar movimento
+	}
+	
 	//ele mostra o estado dele movendo
 	estado_txt = "movendo" ;
 	
@@ -116,6 +135,13 @@ estado_movendo	= function()
 //Terceiro Estado
 viaja_tempo		= function()
 {
+	// SE ESTIVER EM DIÁLOGO, NÃO PROCESSAR INPUTS
+	if (estado == estado_dialogo)
+	{
+	    return; 
+		// Sai da função sem processar movimento
+	}
+	
 	if (keyboard_check_released(ord("F")) xor keyboard_check_released(vk_space)) and delay_tempo <= 0
 	{
 		if (room == Rm_1 and (!place_meeting(x, y, obj_pode_viajar)))
@@ -134,6 +160,40 @@ viaja_tempo		= function()
 			delay_tempo = delay_tempo_max //Resetando o delay
 			opacidade_barra = opacidade_barra_max //Resetando Opacidade
 			cor_barra = c_red //Resetando a cor
+		}
+	}
+}
+
+//Quinto Estado
+estado_dialogo = function()
+{
+	//Se eu tenho um npc
+	if (npc_dialogo)
+	{
+		//ele mostra o estado dele parado
+		estado_txt = "Dialogo" ;
+			
+		//player fica parado
+		velh = 0 ;
+		velv = 0 ;		
+
+		//Criando o diálogo
+		//Checando se ele ainda não existe
+		if (!instance_exists(obj_text_box))
+		{
+			//Variavel de criação do objeto "Text Box"
+			var _obj_dialogo = instance_create_depth(0, 0, 0, obj_text_box) ;
+				
+			//Dialogo do objeto dialogo	
+			_obj_dialogo.player = id ;
+				
+			//Passando o dialogo do npc, para o obj_dialogo
+			with(npc_dialogo)
+			{
+				//O dialogo do objeto dialogo é o dialogo do npc
+				//Dialogo do objeto dialogo			Dialogo do NPC
+				_obj_dialogo.dialogo				= dialogo ;
+			}
 		}
 	}
 }
