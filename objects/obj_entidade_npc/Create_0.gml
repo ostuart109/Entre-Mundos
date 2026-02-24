@@ -91,6 +91,8 @@ dialogo_area = function()
 					//{
 					//	instance_destroy(other.id) ;
 					//}
+					
+					
 				}
 			}
 		//}
@@ -100,3 +102,5 @@ dialogo_area = function()
 //========================================================
 
 #endregion
+
+

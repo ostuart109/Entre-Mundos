@@ -62,7 +62,7 @@ libera_player = function()
 	instance_destroy() ;
 	
 	//destruindo o npv
-	instance_destroy(obj_entidade_npc.id) ;
+	//instance_destroy(obj_entidade_npc.id) ;
 }
 
 pag_dublagem_anterior = -1;
