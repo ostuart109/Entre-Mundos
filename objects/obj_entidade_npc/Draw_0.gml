@@ -4,8 +4,10 @@ draw_self() ;
 
 //====== Desenhando o Debug da area do retangulo  ========
 
+/*
 //Testando
 debug_area() ;
+*/
 
 //========================================================
 

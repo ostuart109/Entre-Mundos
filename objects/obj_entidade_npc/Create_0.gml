@@ -71,18 +71,18 @@ dialogo_area = function()
 	var _player	= collision_rectangle(esquerda, topo, direita, baixo, obj_player, 0, 1) ;
 	
 	//Se o player está colidindo na area
-	if (_player)
+	if (place_meeting(x,y,obj_player))
 	{
 		//Se eu apertar Espaço
 		//if (keyboard_check_released(vk_enter))
 		//{	
-			with(_player)
+			with(obj_player)
 			{
 				//Se o Gemaplys não esta no estado de dialogo
 				if (estado != estado_dialogo)
 				{
 					//Gemaplys entra no estado de dialogo
-					_player.estado = _player.estado_dialogo ;
+					obj_player.estado = obj_player.estado_dialogo ;
 					
 					//Passando que é o npc desse dialogo
 					npc_dialogo = other.id ;
