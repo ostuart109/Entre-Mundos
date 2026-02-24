@@ -77,11 +77,11 @@ keyboard_set_map(ord("D"), vk_right) ;	//Direita
 estado_parado    = function()
 {
 	// SE ESTIVER EM DIÁLOGO, NÃO PROCESSAR INPUTS
-	if (estado == estado_dialogo)
-	{
-	    return; 
-		// Sai da função sem processar movimento
-	}
+	//if (estado == estado_dialogo)
+	//{
+	//    return; 
+	////	// Sai da função sem processar movimento
+	//}
 	
 	//ele mostra o estado dele parado
 	estado_txt = "parado" ;
@@ -176,7 +176,15 @@ estado_dialogo = function()
 		//player fica parado
 		velh = 0 ;
 		velv = 0 ;		
-
+		
+		//meu vetor movendo
+		sprites_index = 0 ;	
+		
+		//Minha sprite vai ser igual ao meu vetor 1 (andando)
+		//[sprites_index]    - vetor andando
+		//[face]            - a face que estou olhando
+		sprite = sprites[sprites_index][face] ;	
+		
 		//Criando o diálogo
 		//Checando se ele ainda não existe
 		if (!instance_exists(obj_text_box))

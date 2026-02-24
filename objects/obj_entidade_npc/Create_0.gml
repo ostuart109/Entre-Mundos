@@ -14,7 +14,7 @@ margem	= 0 ;
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["Eu pareço eles, mas não sigo eles, tenho exemplos tristes com um papel igual esse, e os meus parentes só querem que eu fique, Faculdade é bênção, but I wanna make it big! ", "Fiz coco nas minhas calças e gostei, Fiz coco nas minhas calças e gostei, Fiz coco nas minhas calças e gostei "],
+	texto	: ["Texto de Teste", "Testando o Texto de Teste do Teste"],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto

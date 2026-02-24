@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_npc_1",
+  "%Name":"obj_npc",
   "eventList":[],
   "managed":true,
-  "name":"obj_npc_1",
+  "name":"obj_npc",
   "overriddenProperties":[],
   "parent":{
     "name":"Text Box",
