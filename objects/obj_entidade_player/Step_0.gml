@@ -29,7 +29,8 @@ if global.dialogo_aberto == true
 velh = 0
 velv = 0
 
-estado = estado_parado
+	//estado = estado_parado 	// Removido para permitir estado_dialogo
+
 
 
 }

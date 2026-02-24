@@ -50,19 +50,23 @@ libera_player = function()
 	{
 		with(player)
 		{
+			//Deleta o NPC após o diálogo e salva na lista para não voltar
+			if (instance_exists(npc_dialogo))
+			{
+				array_push(global.npcs_destruidos, string(npc_dialogo)) ;
+				instance_destroy(npc_dialogo) ;
+				npc_dialogo = noone ;
+			}
+			
 			//Ele vai pro estado parado
 			estado = estado_parado ;
 			
 			//Ligando
 			global.dialogo_aberto = false ;
-			
 		}
 	}
 	//Se destruindo
 	instance_destroy() ;
-	
-	//destruindo o npv
-	//instance_destroy(obj_entidade_npc.id) ;
 }
 
 pag_dublagem_anterior = -1;
@@ -70,7 +74,11 @@ pag_dublagem_anterior = -1;
 //Cria o dialogo
 cria_dialogo = function(_dialogo)
 {
+	//Se não tem dialogo eu saio
+	if (_dialogo == noone) return ;
+	
 	//================ Variaveis Gerais 1 ===================	
+
 
 	//Altura e largura da Text Box
 	static _spr_w = sprite_get_width(spr_text_box) ;
@@ -113,7 +121,7 @@ cria_dialogo = function(_dialogo)
 	var _escala_x	= ((_gui_w - 140) / _spr_w) * escala_caixa ;
 	//_spr_h - tamanho da sprite
 	//Quero que ele ocupe 20% da tela
-	var _escala_y	= (_gui_h * 0.2) / _spr_h ;
+	var _escala_y	= ((_gui_h * 0.2) / _spr_h) * escala_caixa ;
 	
 	//Margem do Texto
 	var _margem		= string_height("I") ;
@@ -221,8 +229,10 @@ cria_dialogo = function(_dialogo)
 	//Só faço tudo que estar em baixo, se eu já terminei a animação
 	if (escala_caixa >= 1)
 	{
-		//Sempre que eu apertar Enter 
-		if (keyboard_check_released(vk_enter))
+		//Sempre que eu apertar Enter, Espaço ou F
+		var _avancar = keyboard_check_released(vk_enter) or keyboard_check_released(vk_space) or keyboard_check_released(ord("F")) ;
+		
+		if (_avancar)
 		{
 			//Se eu ainda não terminei a página atual (as letras dela)
 			if (indice < _txt_tam)

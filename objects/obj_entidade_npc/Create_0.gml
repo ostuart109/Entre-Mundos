@@ -1,3 +1,10 @@
+// Se este NPC já foi destruído anteriormente, ele não deve existir
+if (array_contains(global.npcs_destruidos, string(id)))
+{
+	instance_destroy() ;
+	exit ;
+}
+
 //Text Box
 #region TEXT BOX
 
@@ -57,45 +64,30 @@ dialogo_area = function()
 	//Variavel da margem
 	var margem = 5;
 	
-	//Variáveis configuradas pra definir 
-	//o tamanho do retangulo conforme o npc
-	//Com origem em bottom center:
-	//x já está no centro horizontal
-	//y está na base (parte de baixo) da sprite
-	var esquerda = x - sprite_get_width(sprite_index) / 2 - margem;
-	var direita = x + sprite_get_width(sprite_index) / 2 + margem;
-	var topo = y - sprite_get_height(sprite_index) - margem;
-	var baixo = y + margem;
+	// Usando o Bounding Box (bbox) do próprio NPC para definir a área
+	var esquerda = bbox_left;
+	var direita = bbox_right;
+	var topo = bbox_top;
+	var baixo = bbox_bottom;
 
 	//Variavel para checar a colisão do player com o retangulo
 	var _player	= collision_rectangle(esquerda, topo, direita, baixo, obj_player, 0, 1) ;
 	
 	//Se o player está colidindo na area
-	if (place_meeting(x,y,obj_player))
+	if (_player)
 	{
-		//Se eu apertar Espaço
-		//if (keyboard_check_released(vk_enter))
-		//{	
-			with(obj_player)
+		with(_player)
+		{
+			//Se o Gemaplys não esta no estado de dialogo
+			if (estado != estado_dialogo)
 			{
-				//Se o Gemaplys não esta no estado de dialogo
-				if (estado != estado_dialogo)
-				{
-					//Gemaplys entra no estado de dialogo
-					obj_player.estado = obj_player.estado_dialogo ;
-					
-					//Passando que é o npc desse dialogo
-					npc_dialogo = other.id ;
-					
-					//if (npc_dialogo)
-					//{
-					//	instance_destroy(other.id) ;
-					//}
-					
-					
-				}
+				//Gemaplys entra no estado de dialogo
+				estado = estado_dialogo ;
+				
+				//Passando que é o npc desse dialogo
+				npc_dialogo = other.id ;
 			}
-		//}
+		}
 	}
 }
 

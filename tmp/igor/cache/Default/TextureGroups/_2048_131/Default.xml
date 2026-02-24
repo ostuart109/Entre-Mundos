@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureGroup>
+  <texture scale="1" mipsToGenerate="0" texwidth="2048" texheight="2048">default_0.bz2</texture>
+  <tpe x="2" y="2" tpage="default_0.bz2">bg_rm_1_Entre-Mundos_72aec3cf-db5c-4a89-9fed-b2a9fd8ae5ff.tpe</tpe>
+  <tpe x="2" y="774" tpage="default_0.bz2">bg_rm_2_Entre-Mundos_72aec3cf-db5c-4a89-9fed-b2a9fd8ae5ff.tpe</tpe>
+  <tpe x="2" y="1546" tpage="default_0.bz2">fnt_text_box_Entre-Mundos_fnt_text_box.tpe</tpe>
+  <tpe x="262" y="1546" tpage="default_0.bz2">spr_player_andando_Entre-Mundos_924abc73-eee0-4b8a-aa74-4983fa800137.tpe</tpe>
+  <tpe x="2" y="1806" tpage="default_0.bz2">spr_player_andando_Entre-Mundos_84597b1d-7ab2-41e2-a9a5-7307a7196896.tpe</tpe>
+  <tpe x="314" y="1546" tpage="default_0.bz2">spr_npc_1_Entre-Mundos_8653c27c-7e74-4368-9d00-2cff01932326.tpe</tpe>
+  <tpe x="262" y="1648" tpage="default_0.bz2">spr_papo_Entre-Mundos_c33dbcfb-ce13-49c5-b398-938686a17b43.tpe</tpe>
+  <tpe x="52" y="1806" tpage="default_0.bz2">spr_text_box_Entre-Mundos_2dac015b-50ce-4dd9-b2b1-98c2f1993538.tpe</tpe>
+  <tpe x="2" y="1908" tpage="default_0.bz2">spr_player_andando_Entre-Mundos_b79eec5b-b8c7-4bac-a8d0-f22791986cac.tpe</tpe>
+  <tpe x="382" y="1546" tpage="default_0.bz2">spr_player_andando_Entre-Mundos_f79eaf69-fe56-4ee2-b569-85ef94ff285f.tpe</tpe>
+  <tpe x="262" y="1716" tpage="default_0.bz2">spr_collision_mask_Entre-Mundos_242f8738-cd9e-4e33-a85c-accd8033211c.tpe</tpe>
+  <tpe x="52" y="1874" tpage="default_0.bz2">spr_player_Entre-Mundos_4f072a0e-c842-458d-a842-9eb32695a6b0.tpe</tpe>
+  <tpe x="425" y="1546" tpage="default_0.bz2">spr_player_Entre-Mundos_8d60719e-842a-4f4f-9948-d3ad0c46c2ff.tpe</tpe>
+  <tpe x="425" y="1546" tpage="default_0.bz2">spr_player_Entre-Mundos_b09acd2c-ab60-480e-8026-a6cd5b273dff.tpe</tpe>
+  <tpe x="52" y="1874" tpage="default_0.bz2">spr_player_Entre-Mundos_b1c8dddb-9067-437f-8992-74b8f7371b6d.tpe</tpe>
+  <tpe x="425" y="1546" tpage="default_0.bz2">spr_player_Entre-Mundos_d14cc9b7-3c2e-41bd-8005-a20d5f00d21e.tpe</tpe>
+  <tpe x="425" y="1546" tpage="default_0.bz2">spr_player_Entre-Mundos_df17802e-94be-4c9b-836e-9be98fd6d5ca.tpe</tpe>
+  <tpe x="425" y="1546" tpage="default_0.bz2">spr_player_Entre-Mundos_f7ba2d27-4ce8-4fde-85f1-fb388cdd6f2b.tpe</tpe>
+  <tpe x="330" y="1614" tpage="default_0.bz2">spr_player_Entre-Mundos_61db8020-9c07-474e-9ef0-d6e0ddc6f8ab.tpe</tpe>
+  <tpe x="305" y="1716" tpage="default_0.bz2">spr_player_Entre-Mundos_ebbe336b-c414-4abc-a216-f6645e43f9ba.tpe</tpe>
+  <tpe x="120" y="1806" tpage="default_0.bz2">spr_player_Entre-Mundos_89995b8f-f594-45c8-b18f-fed4cfc4e8be.tpe</tpe>
+  <tpe x="468" y="1546" tpage="default_0.bz2">spr_player_Entre-Mundos_cf291278-686d-4585-95f0-9d77581e7424.tpe</tpe>
+  <tpe x="2" y="2012" tpage="default_0.bz2">spr_colisao_Entre-Mundos_8209e09b-e1ac-4791-b580-7a4f3ed75005.tpe</tpe>
+  <tpe x="45" y="1977" tpage="default_0.bz2">spr_pode_viajar_Entre-Mundos_650c47a8-5014-407c-b43d-d7e1798484cb.tpe</tpe>
+</TextureGroup>
