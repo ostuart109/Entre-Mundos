@@ -52,8 +52,9 @@ libera_player = function()
 		{
 			//Ele vai pro estado parado
 			estado = estado_parado ;
-			//ligando
-			global.dialogo_aberto = false
+			
+			//Ligando
+			global.dialogo_aberto = false ;
 			
 		}
 	}
