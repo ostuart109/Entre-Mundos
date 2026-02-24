@@ -475,7 +475,7 @@ desenha_vida = function()
 	var _pos_x = 20 ;
 	
 	//Posição do Y
-	var _pos_y = 80 ;
+	var _pos_y = 20 ;
 	
 	//Espaçamento entre os corações
 	var _espaco = 32 ;
