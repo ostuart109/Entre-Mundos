@@ -34,8 +34,6 @@ velv = 0
 
 	//estado = estado_parado 	// Removido para permitir estado_dialogo
 
-
-
 }
 else
 {
@@ -43,11 +41,3 @@ else
 
 
 }
-
-//Checa se o objeto do Portal ta sendo destruído
-//if (keyboard_check(ord("T")))
-//{
-//	var _checa_portal	= instance_number(obj_portal) ;
-
-//	show_message(_checa_portal) ;	
-//}
