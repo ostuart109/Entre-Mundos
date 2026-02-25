@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"snd_vida_pop",
+  "%Name":"Sound6",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.96,
+  "duration":0.0,
   "exportDir":"",
-  "name":"snd_vida_pop",
+  "name":"Sound6",
   "parent":{
-    "name":"Vida",
-    "path":"folders/Sounds/Vida.yy",
+    "name":"Text Box",
+    "path":"folders/Sounds/Text Box.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_vida_pop.mp3",
-  "volume":0.2,
+  "soundFile":"",
+  "volume":1.0,
 }

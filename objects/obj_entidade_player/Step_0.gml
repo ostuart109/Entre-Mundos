@@ -28,12 +28,10 @@ delay_tempo--;
 //Zerando a velocidade se o dialogo estiver aberto
 if global.dialogo_aberto == true
 {
-
-velh = 0
-velv = 0
+	velh = 0
+	velv = 0
 
 	//estado = estado_parado 	// Removido para permitir estado_dialogo
-
 }
 else
 {
