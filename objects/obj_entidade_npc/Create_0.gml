@@ -27,7 +27,7 @@ dialogo =
 	//Velocidade do Texto
 	txt_vel : 0.3 ,
 	//Som do Texto
-	//sound	: [snd_elder_kettle, snd_elder_kettle]
+	sound	: [snd_speech, snd_speech]
 }
 
 //====== Desenhando o Debug da area do retangulo  ========

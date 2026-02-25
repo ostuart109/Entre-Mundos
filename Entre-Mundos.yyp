@@ -86,6 +86,7 @@
     {"id":{"name":"ogg_snd_monk_footstep_02","path":"sounds/ogg_snd_monk_footstep_02/ogg_snd_monk_footstep_02.yy",},},
     {"id":{"name":"snd_portal","path":"sounds/snd_portal/snd_portal.yy",},},
     {"id":{"name":"snd_puzzles","path":"sounds/snd_puzzles/snd_puzzles.yy",},},
+    {"id":{"name":"snd_speech","path":"sounds/snd_speech/snd_speech.yy",},},
     {"id":{"name":"snd_vida_pop","path":"sounds/snd_vida_pop/snd_vida_pop.yy",},},
     {"id":{"name":"bg_rm_1","path":"sprites/bg_rm_1/bg_rm_1.yy",},},
     {"id":{"name":"bg_rm_2","path":"sprites/bg_rm_2/bg_rm_2.yy",},},
