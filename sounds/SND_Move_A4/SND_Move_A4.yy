@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"SND_Move_A4",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.10303855,
+  "exportDir":"",
+  "name":"SND_Move_A4",
+  "parent":{
+    "name":"Passos",
+    "path":"folders/Sounds/Passos.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SND_Move_A4.ogg",
+  "volume":0.1,
+}

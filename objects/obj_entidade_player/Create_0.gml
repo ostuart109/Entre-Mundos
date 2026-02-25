@@ -70,6 +70,15 @@ npc_dialogo	= noone ;
 //Frame da animação de destruição (image_index manual)
 anim_destroi_frame = 0;
 
+
+//=================== Audio andando ======================
+
+
+max_tempo	= game_get_speed(gamespeed_fps) * 0.5 ;
+
+tempo_audio = max_tempo;
+
+
 //====================== Mapeamento ======================
 
 
@@ -142,11 +151,23 @@ estado_movendo	= function()
 	//[face]            - a face que estou olhando
 	sprite = sprites[sprites_index][face] ;	
 	
+	//tempo audio
+	tempo_audio -- ;
+	
 	//Saindo do estado movendo se a velocidade é quase 0
 	if (abs(velv) <= 0.1 and abs(velh) <= 0.1)
 	{
 	    //estou parado
 	    estado = estado_parado ;
+	}
+	
+	if (tempo_audio <= 0)
+	{
+		var _som = random_range(ogg_snd_monk_footstep_01, ogg_snd_monk_footstep_02) ;
+		
+		audio_play_sound(_som, 5, 0) ;
+		
+		tempo_audio = max_tempo ;
 	}
 }
 

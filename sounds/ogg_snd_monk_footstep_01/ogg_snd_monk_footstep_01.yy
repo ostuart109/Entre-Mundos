@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"ogg_snd_monk_footstep_01",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.3970975,
+  "exportDir":"",
+  "name":"ogg_snd_monk_footstep_01",
+  "parent":{
+    "name":"Passos",
+    "path":"folders/Sounds/Passos.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"ogg_snd_monk_footstep_01.ogg",
+  "volume":1.0,
+}
