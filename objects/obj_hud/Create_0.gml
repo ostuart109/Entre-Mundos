@@ -19,6 +19,21 @@ desenha_fps = function()
 	draw_set_colour(-1) ;
 }
 
+//Musicas
+musica_puzzles = function()
+{
+	if (room == Rm_1 or room == Rm_2)
+	{
+		audio_play_sound(snd_puzzles, 10, 1) ;
+	}
+	else
+	{
+		audio_stop_all() ;
+	}
+}
+
+
+
 
 
 #endregion
