@@ -80,37 +80,99 @@ musica_puzzles = function()
 
 musica_puzzles = function()
 {
-    show_debug_message("=== musica_puzzles chamada ===");
-    show_debug_message("room atual: " + string(room));
-    show_debug_message("Rm_1: " + string(Rm_1));
-    show_debug_message("Rm_2: " + string(Rm_2));
-    show_debug_message("current_music: " + string(current_music));
-    show_debug_message("snd_puzzles: " + string(snd_puzzles));
-
     var _checa_room_puzzle = (room == Rm_1 or room == Rm_2);
-    show_debug_message("_checa_room_puzzle: " + string(_checa_room_puzzle));
+    //show_debug_message("_checa_room_puzzle: " + string(_checa_room_puzzle));
 
     if (_checa_room_puzzle and current_music != snd_puzzles)
     {
-        show_debug_message("ENTROU NO IF - vai tocar música");
+        //show_debug_message("ENTROU NO IF - vai tocar música");
         audio_play_sound(snd_puzzles, 10, true, 1.0, 0, 1.0);
         audio_sound_gain(snd_puzzles, 1.0, 2000);
         current_music = snd_puzzles;
     }
 
     var _nao_checa_room_puzzle = (room != Rm_1 and room != Rm_2);
-    show_debug_message("_nao_checa_room_puzzle: " + string(_nao_checa_room_puzzle));
+    //show_debug_message("_nao_checa_room_puzzle: " + string(_nao_checa_room_puzzle));
 
     if (_nao_checa_room_puzzle and current_music == snd_puzzles)
     {
-        show_debug_message("PAROU A MÚSICA");
+        //show_debug_message("PAROU A MÚSICA");
         audio_stop_sound(snd_puzzles);
         current_music = -1;
     }
 }
 
+//Sistema de Save do Game JSON
+salva_jogo = function()
+{
+	//Criando a Struct com os dados
+	var _dados = 
+	{
+		//Criando uma struct com os dados do player
+		player :
+		{
+			//Salvando a Posição do Player
+			meu_x		: obj_player.x,
+			meu_y		: obj_player.y,
+			
+			//Salvando a Room que o Player está
+			rm			: room,
+			
+			//Salvando o dialogo da Text box
+			//text_box	: obj_text_box._dialogo.texto[pag],
+			
+			//Velocidade da Text box
+			//txt_vel		: obj_text_box._dialogo.txt_vel[pag],
+			
+			//Som da Text Box
+			//sound		: obj_text_box._dialogo.sound[pag]
+		},
+		
+	}
+	
+	//Convertendo os dados em JSON
+	var _string = json_stringify(_dados) ;
+	
+	//Abrindo o meu arquivo
+	var _file	= file_text_open_write("Meu save.json") ;
+	
+	//Gravando as informações nele
+	file_text_write_string(_file, _string) ;
+	
+	//Fechando o arquivo
+	file_text_close(_file) ;
+}
 
-
-
+//Carregando o jogo do JSON
+carrega_jogo = function()
+{
+	//Abrindo o arquivo
+	var _file	= file_text_open_read("Meu save.json") ;
+	
+	//Pegando os dados do arquivo
+	var _string	= file_text_read_string(_file) ;
+	
+	//Fechando o arquivo
+	file_text_close(_file) ;
+	
+	//Convertendo a String em um Struct novamente
+	var _dados	= json_parse(_string) ;
+	
+	//Passando as informações da posição do player
+	obj_player.x	= _dados.player.meu_x ;
+	obj_player.y	= _dados.player.meu_y ;
+	
+	//Salvando a Room
+	room			= _dados.player.rm ;
+	
+	//Salvando o dialogo da Text box
+	//obj_text_box._dialogo.texto[pag]	= _dados.player.text_box ;
+			
+	//Velocidade da Text box
+	//obj_text_box._dialogo.txt_vel[pag]	= _dados.player.txt_vel ; 
+			
+	//Som da Text Box
+	//obj_text_box._dialogo.sound[pag]	= _dados.player.sound ; 
+}
 
 #endregion

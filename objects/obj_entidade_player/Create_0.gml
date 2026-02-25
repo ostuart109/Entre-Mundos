@@ -482,6 +482,8 @@ vida_player = function()
 	{
 		//Ele se destroi
 		instance_destroy() ;
+		
+		global.player_morreu = true ;
 	}	
 }
 
