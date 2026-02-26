@@ -8,9 +8,6 @@ animacao() ;
 
 viaja_tempo() ;
 
-//Vida do Player
-vida_player() ;
-
 #endregion
 
 // Sincronizando o sprite_index para que o image_index respeite a quantidade de frames de cada sprite

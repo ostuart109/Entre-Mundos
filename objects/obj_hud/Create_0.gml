@@ -89,9 +89,6 @@ salva_jogo		= function(_save)
 			//Salvando a Room que o Player está
 			rm			: room,
 			
-			//Vida
-			m_vida		: global.vida,
-			
 			//Salvando o dialogo 
 			dialogo		:  global.npcs_destruidos
 		}, 
@@ -138,9 +135,6 @@ carrega_jogo	= function(_save)
 	
 	//Salvando a Room
 	room					= _dados.player.rm ;
-			
-	//Vida
-	global.vida				= _dados.player.m_vida ;
 }
 
 //Iniciando o jogo
@@ -208,12 +202,6 @@ usa_save		= function()
 	{
 		salva_jogo(global.save) ;
 	}
-	
-	//Carregando
-	//if (keyboard_check_released(ord("L")))
-	//{
-	//	carrega_jogo(global.save) ;
-	//}
 }
 
 #endregion

@@ -1,11 +1,3 @@
-//Vida do player
-global.vida				= 5 ;
-
-//Vida Anterior é a vida do Player
-global.vida_anterior	= global.vida;
-
-//Player Morreu
-global.player_morreu	= false ;
 
 //Gerando o Player
 function scr_player_layer()
