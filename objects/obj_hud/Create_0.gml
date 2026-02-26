@@ -136,24 +136,6 @@ carrega_jogo	= function(_save)
 	global.vida				= _dados.player.m_vida ;
 }
 
-//Usando Saves
-usa_save		= function()
-{
-	//Testando o meu Save
-	
-	//Salvando
-	if (keyboard_check_released(ord("K")))
-	{
-		salva_jogo(global.save) ;
-	}
-	
-	//Carregando
-	if (keyboard_check_released(ord("L")))
-	{
-		carrega_jogo(global.save) ;
-	}
-}
-
 //Iniciando o jogo
 inicia_jogo		= function(_dados)
 {
@@ -208,6 +190,22 @@ inicia_jogo		= function(_dados)
 	//Se os dados forem válidos
 	//Ele inicia o jogo com as informações dos dados
 	
+}
+
+//Usando Saves
+usa_save		= function()
+{
+	//Testando o meu Save
+	if (keyboard_check_released(ord("K")))
+	{
+		salva_jogo(global.save) ;
+	}
+	
+	//Carregando
+	//if (keyboard_check_released(ord("L")))
+	//{
+	//	carrega_jogo(global.save) ;
+	//}
 }
 
 #endregion

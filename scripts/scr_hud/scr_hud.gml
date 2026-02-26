@@ -14,6 +14,9 @@ global.iniciou = false ;
 //Variável para saber qual o save do jogo
 global.save = saves.save_01 ;
 
+//salvando
+global.saves_destruidos = [] ;
+
 function pega_sequencia(_nome)
 {
 	//Pegando a minha layer
