@@ -52,11 +52,12 @@ libera_player = function()
 		{
 			//Deleta o NPC após o diálogo e salva na lista para não voltar
 			if (instance_exists(npc_dialogo))
-			{
-				array_push(global.npcs_destruidos, string(npc_dialogo)) ;
-				instance_destroy(npc_dialogo) ;
-				npc_dialogo = noone ;
-			}
+            {
+                //Salva o ID fixo (posição) em vez do ID de instância
+                array_push(global.npcs_destruidos, npc_dialogo.meu_id) ;
+                instance_destroy(npc_dialogo) ;
+                npc_dialogo = noone ;
+            }
 			
 			//Ele vai pro estado parado
 			estado = estado_parado ;

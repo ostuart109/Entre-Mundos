@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_hud",
   "parent":{
-    "name":"HUD",
-    "path":"folders/Scripts/HUD.yy",
+    "name":"Hud",
+    "path":"folders/Scripts/HUD/Hud.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

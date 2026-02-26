@@ -1,8 +1,11 @@
-// Se este NPC já foi destruído anteriormente, ele não deve existir
-if (array_contains(global.npcs_destruidos, string(id)))
+//ID fixo do NPC, baseado na posição (não muda entre sessões)
+meu_id = string(x) + "_" + string(y) + "_" + string(room) ;
+
+//Se este NPC já foi destruído anteriormente, ele não deve existir
+if (array_contains(global.npcs_destruidos, meu_id))
 {
-	instance_destroy() ;
-	exit ;
+    instance_destroy() ;
+    exit ;
 }
 
 //Text Box

@@ -114,7 +114,7 @@ salva_jogo		= function(_save)
 carrega_jogo	= function(_save)
 {
 	//Alternando os saves
-	var _arquivo = "Meu Save" + string(_save+1) + ".json" ;	
+	var _arquivo			= "Meu Save" + string(_save+1) + ".json" ;	
 	
 	//Abrindo o arquivo
 	var _file				= file_text_open_read(_arquivo) ;
@@ -128,6 +128,10 @@ carrega_jogo	= function(_save)
 	//Convertendo a String em um Struct novamente
 	var _dados				= json_parse(_string) ;
 	
+    // Carrega o array de NPCs destruídos ANTES de ir pra room
+    // (assim os obj_entidade_npc já checam corretamente no CREATE)
+    global.npcs_destruidos	= _dados.player.dialogo ;
+	
 	//Passando as informações da posição do player
 	obj_player.x			= _dados.player.meu_x ;
 	obj_player.y			= _dados.player.meu_y ;
@@ -137,9 +141,6 @@ carrega_jogo	= function(_save)
 			
 	//Vida
 	global.vida				= _dados.player.m_vida ;
-	
-	//Salvando o dialogo
-	global.npcs_destruidos  = _dados.player.dialogo	 ;
 }
 
 //Iniciando o jogo
@@ -172,23 +173,24 @@ inicia_jogo		= function(_dados)
 			}
 			else //Se eu tenho dados
 			{
-				//Vou fazer diferente
-				//Ir para a room correta e arrumar o resto
+			    // Carrega o array ANTES de ir pra room
+			    // (assim os NPCs já checam corretamente no CREATE deles)
+			    global.npcs_destruidos = _dados.player.dialogo ;
 				
-				//Criando ele na room e posição
-				room_goto(_dados.player.rm) ;
+			    //Criando ele na room e posição
+			    room_goto(_dados.player.rm) ;
 				
-				//Layer do Player
-				var _lay_player	= layer_create(-10000, "Player") ;
-						
-				//Cria Player
-				var _player = instance_create_layer(0, 0, _lay_player, obj_player) ;
+			    //Layer do Player
+			    var _lay_player = layer_create(-10000, "Player") ;
 				
-				with(_player)
-				{
-					x	= _dados.player.meu_x ;
-					y	= _dados.player.meu_y ;				
-				}
+			    //Cria Player
+			    var _player = instance_create_layer(0, 0, _lay_player, obj_player) ;
+				
+			    with(_player)
+			    {
+			        x = _dados.player.meu_x ;	
+			        y = _dados.player.meu_y ;				
+			    }
 			}
 		}
 	}

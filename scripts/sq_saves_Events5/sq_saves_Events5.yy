@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"sq_saves_Events5",
   "parent":{
-    "name":"Entre-Mundos",
-    "path":"Entre-Mundos.yyp",
+    "name":"Save",
+    "path":"folders/Scripts/HUD/Save.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

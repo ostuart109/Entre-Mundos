@@ -35,6 +35,8 @@
     {"$GMFolder":"","%Name":"Teste","folderPath":"folders/Rooms/Teste.yy","name":"Teste","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scripts","folderPath":"folders/Scripts.yy","name":"Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"HUD","folderPath":"folders/Scripts/HUD.yy","name":"HUD","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Hud","folderPath":"folders/Scripts/HUD/Hud.yy","name":"Hud","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Save","folderPath":"folders/Scripts/HUD/Save.yy","name":"Save","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Player","folderPath":"folders/Scripts/Player.yy","name":"Player","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sistema de Barra","folderPath":"folders/Scripts/Sistema de Barra.yy","name":"Sistema de Barra","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},
