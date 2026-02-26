@@ -1,5 +1,5 @@
 //Vida do player
-global.vida				= 5 ; 
+global.vida				= 5 ;
 
 //Vida Anterior é a vida do Player
 global.vida_anterior	= global.vida;

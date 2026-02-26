@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sq_saves_Events5",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sq_saves_Events5",
+  "parent":{
+    "name":"Entre-Mundos",
+    "path":"Entre-Mundos.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
