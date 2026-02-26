@@ -147,7 +147,6 @@ inicia_jogo		= function(_dados)
 {
 	//Se eu estou na room inicial
 	//vou ver se a sequencia foi terminada
-
 	var _seq	= pega_sequencia("Saves") ;
 	
 	if (layer_sequence_is_finished(_seq))
@@ -195,21 +194,9 @@ inicia_jogo		= function(_dados)
 			    }
 			}
 		}
-	}
-			
+	}	
 	//Se os dados forem válidos
 	//Ele inicia o jogo com as informações dos dados
-	
 }
-
-//Usando Saves
-//usa_save		= function()
-//{
-//	//Testando o meu Save
-//	if (keyboard_check_released(ord("K")))
-//	{
-//		salva_jogo(global.save) ;
-//	}
-//}
 
 #endregion
