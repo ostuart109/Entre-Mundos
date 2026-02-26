@@ -90,8 +90,11 @@ salva_jogo		= function(_save)
 			rm			: room,
 			
 			//Vida
-			m_vida		: global.vida
-		},
+			m_vida		: global.vida,
+			
+			//Salvando o dialogo 
+			dialogo		:  global.npcs_destruidos
+		}, 
 	}
 	
 	//Convertendo os dados em JSON
@@ -134,6 +137,9 @@ carrega_jogo	= function(_save)
 			
 	//Vida
 	global.vida				= _dados.player.m_vida ;
+	
+	//Salvando o dialogo
+	global.npcs_destruidos  = _dados.player.dialogo	 ;
 }
 
 //Iniciando o jogo
