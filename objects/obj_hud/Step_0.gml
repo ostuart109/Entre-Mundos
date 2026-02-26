@@ -9,6 +9,6 @@ musica_puzzles() ;
 	inicia_jogo(dados) ;
 //}
 
-usa_save() ;
+//usa_save() ;
 
 #endregion

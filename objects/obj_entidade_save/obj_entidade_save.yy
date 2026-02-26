@@ -12,11 +12,8 @@
     "name":"Saves",
     "path":"folders/Objects/Menu/Saves.yy",
   },
-  "parentObjectId":{
-    "name":"obj_save_colisao",
-    "path":"objects/obj_save_colisao/obj_save_colisao.yy",
-  },
-  "persistent":false,
+  "parentObjectId":null,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

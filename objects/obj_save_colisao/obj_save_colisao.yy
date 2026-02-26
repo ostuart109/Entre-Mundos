@@ -9,7 +9,10 @@
     "name":"Saves",
     "path":"folders/Objects/Menu/Saves.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_entidade_save",
+    "path":"objects/obj_entidade_save/obj_entidade_save.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

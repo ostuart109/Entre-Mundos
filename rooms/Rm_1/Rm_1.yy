@@ -20,13 +20,13 @@
     {"name":"inst_29FACAAF","path":"rooms/Rm_1/Rm_1.yy",},
     {"name":"inst_2ECBBBB6","path":"rooms/Rm_1/Rm_1.yy",},
     {"name":"inst_6ABAF2C2","path":"rooms/Rm_1/Rm_1.yy",},
-    {"name":"inst_525A688B","path":"rooms/Rm_1/Rm_1.yy",},
+    {"name":"inst_435FE897","path":"rooms/Rm_1/Rm_1.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Player","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"save","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_525A688B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_525A688B","objectId":{"name":"obj_save_colisao","path":"objects/obj_save_colisao/obj_save_colisao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":5.0,"x":544.0,"y":192.0,},
+        {"$GMRInstance":"v4","%Name":"inst_435FE897","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_435FE897","objectId":{"name":"obj_save_colisao","path":"objects/obj_save_colisao/obj_save_colisao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":5.0,"x":704.0,"y":192.0,},
       ],"layers":[],"name":"save","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Colisao","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_1B4A4F3F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1B4A4F3F","objectId":{"name":"obj_colisao","path":"objects/obj_colisao/obj_colisao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":15.0,"scaleY":1.0,"x":416.0,"y":160.0,},

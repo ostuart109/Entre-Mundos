@@ -90,7 +90,10 @@ salva_jogo		= function(_save)
 			rm			: room,
 			
 			//Salvando o dialogo 
-			dialogo		:  global.npcs_destruidos
+			dialogo		:  global.npcs_destruidos,
+			
+		    // Salvando os saves usados
+		    saves       : global.saves_destruidos
 		}, 
 	}
 	
@@ -128,6 +131,8 @@ carrega_jogo	= function(_save)
     // Carrega o array de NPCs destruídos ANTES de ir pra room
     // (assim os obj_entidade_npc já checam corretamente no CREATE)
     global.npcs_destruidos	= _dados.player.dialogo ;
+	
+	global.saves_destruidos = _dados.player.saves ;
 	
 	//Passando as informações da posição do player
 	obj_player.x			= _dados.player.meu_x ;
@@ -171,6 +176,9 @@ inicia_jogo		= function(_dados)
 			    // (assim os NPCs já checam corretamente no CREATE deles)
 			    global.npcs_destruidos = _dados.player.dialogo ;
 				
+				//Saves destruidos
+				global.saves_destruidos = _dados.player.saves ;
+
 			    //Criando ele na room e posição
 			    room_goto(_dados.player.rm) ;
 				
@@ -195,13 +203,13 @@ inicia_jogo		= function(_dados)
 }
 
 //Usando Saves
-usa_save		= function()
-{
-	//Testando o meu Save
-	if (keyboard_check_released(ord("K")))
-	{
-		salva_jogo(global.save) ;
-	}
-}
+//usa_save		= function()
+//{
+//	//Testando o meu Save
+//	if (keyboard_check_released(ord("K")))
+//	{
+//		salva_jogo(global.save) ;
+//	}
+//}
 
 #endregion
