@@ -72,8 +72,8 @@ controla_musica = function()
         // Toca a nova música (se houver uma definida para a sala)
         if (_musica_alvo != -1)
         {
-            audio_play_sound(_musica_alvo, 10, true, 1.0, 0, 1.0);
-            audio_sound_gain(_musica_alvo, 1.0, 2000);
+            audio_play_sound(_musica_alvo, 10, true, 0.6, 0, 1.0);
+            //audio_sound_gain(_musica_alvo, 1.0, 2000);
         }
         
         // Atualiza qual música é a atual

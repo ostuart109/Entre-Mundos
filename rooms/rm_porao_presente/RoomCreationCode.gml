@@ -4,7 +4,7 @@
 scr_player_layer() ;
 
 // Creation Code da room
-global.room_name = "Sala - Passado";
+global.room_name = "Porão - Presente";
 
 #endregion
 

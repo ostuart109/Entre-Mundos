@@ -178,7 +178,7 @@ estado_movendo	= function()
 	if (tempo_audio <= 0)
 	{
 		var _som = random_range(ogg_snd_monk_footstep_01, ogg_snd_monk_footstep_02) ;
-		var _ganho =  random_range(1.5, 0.4)
+		var _ganho =  random_range(1.0, 0.4)
 		
 		audio_play_sound(_som, 5, 0, _ganho) ;
 		
