@@ -1,10 +1,13 @@
 #region Usando Métodos
 
+//Iniciando os dados do jogo
+inicia_jogo(dados) ;
+
 //Musica das room dos puzzles
 musica_puzzles() ;
 
-//Iniciando os dados do jogo
-inicia_jogo(dados) ;
+//Musica para Menu
+musica_menu() ;
 
 #endregion
 

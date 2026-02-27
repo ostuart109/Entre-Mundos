@@ -55,13 +55,35 @@ musica_puzzles = function()
         audio_sound_gain(snd_puzzles, 1.0, 2000);
         current_music = snd_puzzles;
     }
-
+	
     var _nao_checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal);
-
+	
     if (_nao_checa_room_puzzle and current_music == snd_puzzles)
     {
         //show_debug_message("PAROU A MÚSICA");
         audio_stop_sound(snd_puzzles);
+        current_music = -1;
+    }
+}
+
+musica_menu = function()
+{
+    var _checa_room_puzzle = (room == rm_saves) ;
+	
+    if (_checa_room_puzzle and current_music != snd_saves)
+    {
+        //show_debug_message("ENTROU NO IF - vai tocar música");
+        audio_play_sound(snd_saves, 10, true, 1.0, 0, 1.0);
+        audio_sound_gain(snd_saves, 1.0, 2000);
+        current_music = snd_saves;
+    }
+	
+    var _nao_checa_room_puzzle = (room == rm_saves);
+	
+    if (_nao_checa_room_puzzle and current_music == snd_saves)
+    {
+        //show_debug_message("PAROU A MÚSICA");
+        audio_stop_sound(snd_saves);
         current_music = -1;
     }
 }
