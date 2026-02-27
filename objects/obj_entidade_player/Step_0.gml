@@ -3,6 +3,38 @@
 //Colisão
 //colisao() ;
 
+//transição
+if tp_cooldown > 0 tp_cooldown--;
+
+if transition == 1
+{
+    trans_alpha += 0.05;
+    if trans_alpha >= 1
+    {
+        trans_alpha = 1;
+        transition  = 2;
+        x = next_x;
+        y = next_y;
+        room_goto(next_room);
+    }
+}
+
+if transition == 2
+{
+    trans_alpha -= 0.05;
+    if trans_alpha <= 0
+    {
+        trans_alpha = 0;
+        transition  = 0;
+    }
+}
+
+
+
+//profundidade
+depth = -(y + sprite_height - sprite_yoffset);
+
+
 //Animações Gemaplys
 animacao() ;
 

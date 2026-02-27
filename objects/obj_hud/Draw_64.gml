@@ -1,6 +1,6 @@
 #region Usando Métodos
 
 //FPS
-desenha_fps() ;
+//desenha_fps() ;
 
 #endregion

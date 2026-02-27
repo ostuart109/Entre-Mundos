@@ -7,6 +7,15 @@ velv	= 0 ;
 
 max_vel	= 3 ;
 
+
+// Transição de Room
+tp_cooldown = 0;
+transition = 0; // 0 = nada, 1 = fechando, 2 = abrindo
+trans_alpha = 0;
+next_room   = -1;
+next_x      = 0;
+next_y      = 0;
+
 //Delay do Sistema de viagem temporal
 delay_tempo_max = 60 * 2; //Multiplicando o valor por segundos.
 delay_tempo = delay_tempo_max; //Aplicando delay
@@ -164,8 +173,9 @@ estado_movendo	= function()
 	if (tempo_audio <= 0)
 	{
 		var _som = random_range(ogg_snd_monk_footstep_01, ogg_snd_monk_footstep_02) ;
+		var _ganho =  random_range(1.5, 0.4)
 		
-		audio_play_sound(_som, 5, 0) ;
+		audio_play_sound(_som, 5, 0, _ganho) ;
 		
 		tempo_audio = max_tempo ;
 	}

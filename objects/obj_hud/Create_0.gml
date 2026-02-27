@@ -44,47 +44,40 @@ desenha_fps = function()
 
 //====================== MUSICAS =========================
 
-musica_puzzles = function()
+controla_musica = function()
 {
-    var _checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal) ;
-	
-    if (_checa_room_puzzle and current_music != snd_puzzles)
+    var _musica_alvo = -1;
+    
+    // Categorizando as salas por música
+    var _salas_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal or room == Rm_1 or room == Rm_2);
+    
+    if (_salas_puzzle) 
     {
-        //show_debug_message("ENTROU NO IF - vai tocar música");
-        audio_play_sound(snd_puzzles, 10, true, 1.0, 0, 1.0);
-        audio_sound_gain(snd_puzzles, 1.0, 2000);
-        current_music = snd_puzzles;
+        _musica_alvo = snd_puzzles;
     }
-	
-    var _nao_checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal);
-	
-    if (_nao_checa_room_puzzle and current_music == snd_puzzles)
+    else if (room == rm_saves)
     {
-        //show_debug_message("PAROU A MÚSICA");
-        audio_stop_sound(snd_puzzles);
-        current_music = -1;
+        _musica_alvo = snd_saves;
     }
-}
-
-musica_menu = function()
-{
-    var _checa_room_puzzle = (room == rm_saves) ;
-	
-    if (_checa_room_puzzle and current_music != snd_saves)
+    
+    // Se a música que deve tocar mudou
+    if (current_music != _musica_alvo)
     {
-        //show_debug_message("ENTROU NO IF - vai tocar música");
-        audio_play_sound(snd_saves, 10, true, 1.0, 0, 1.0);
-        audio_sound_gain(snd_saves, 1.0, 2000);
-        current_music = snd_saves;
-    }
-	
-    var _nao_checa_room_puzzle = (room == rm_saves);
-	
-    if (_nao_checa_room_puzzle and current_music == snd_saves)
-    {
-        //show_debug_message("PAROU A MÚSICA");
-        audio_stop_sound(snd_saves);
-        current_music = -1;
+        // Para a música que estiver tocando atualmente (se houver)
+        if (current_music != -1)
+        {
+            audio_stop_sound(current_music);
+        }
+        
+        // Toca a nova música (se houver uma definida para a sala)
+        if (_musica_alvo != -1)
+        {
+            audio_play_sound(_musica_alvo, 10, true, 1.0, 0, 1.0);
+            audio_sound_gain(_musica_alvo, 1.0, 2000);
+        }
+        
+        // Atualiza qual música é a atual
+        current_music = _musica_alvo;
     }
 }
 
