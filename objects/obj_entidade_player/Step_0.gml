@@ -54,6 +54,8 @@ if (sprite_index != sprite)
 //Diminuindo o Delay de tempo
 delay_tempo--;
 
+
+
 //Zerando a velocidade se o dialogo estiver aberto
 if global.dialogo_aberto == true
 {
@@ -67,4 +69,13 @@ else
 
 
 
+}
+
+
+//Fazendo o nome da room desaparecer
+if room_name_timer > 0
+{
+    room_name_timer--;
+    if room_name_timer < 60 // último segundo faz fade out
+        room_name_alpha = room_name_timer / 60;
 }

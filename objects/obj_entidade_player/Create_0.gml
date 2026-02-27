@@ -16,6 +16,11 @@ next_room   = -1;
 next_x      = 0;
 next_y      = 0;
 
+// Definindo variaveis de Room
+room_name_text  = "";
+room_name_timer = 0;
+room_name_alpha = 0;
+
 //Delay do Sistema de viagem temporal
 delay_tempo_max = 60 * 2; //Multiplicando o valor por segundos.
 delay_tempo = delay_tempo_max; //Aplicando delay
@@ -465,3 +470,5 @@ cria_portal = function()
 }
 
 #endregion
+
+
