@@ -12,21 +12,21 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"1659dff5-cad3-4342-9728-b9449aebb0f8","name":"1659dff5-cad3-4342-9728-b9449aebb0f8","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"a364546b-3d9d-45ab-b882-623ed4983854","name":"a364546b-3d9d-45ab-b882-623ed4983854","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":198,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"3d0fdbea-286f-4f06-b0cf-4c48ba60beb6","blendMode":0,"displayName":"default","isLocked":false,"name":"3d0fdbea-286f-4f06-b0cf-4c48ba60beb6","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"4b23d29e-a4d6-484b-86c9-ddd185339482","blendMode":0,"displayName":"default","isLocked":false,"name":"4b23d29e-a4d6-484b-86c9-ddd185339482","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_quintal",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Level Design",
-    "path":"folders/Sprites/Level Design.yy",
+    "name":"Passado",
+    "path":"folders/Sprites/Level Design/Passado.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1659dff5-cad3-4342-9728-b9449aebb0f8","path":"sprites/spr_quintal/spr_quintal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ec1ec3d1-9681-4111-8592-f00b7afa99f4","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"a364546b-3d9d-45ab-b882-623ed4983854","path":"sprites/spr_quintal/spr_quintal.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"3c7d744a-cf9e-4a6f-9df4-2128e5ad67be","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

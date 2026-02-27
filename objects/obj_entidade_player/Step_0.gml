@@ -36,24 +36,3 @@ else
 
 
 }
-
-if (keyboard_check_released(ord("C")))
-{
-	room_goto(rm_corredor) ;
-}
-
-
-if (keyboard_check_released(ord("Q")))
-{
-	room_goto(rm_quarto) ;
-}
-
-if (keyboard_check_released(ord("G")))
-{
-	room_goto(rm_cozinha) ;
-}
-
-if (keyboard_check_released(ord("R")))
-{
-	room_goto(rm_quintal) ;
-}

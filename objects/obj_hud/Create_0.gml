@@ -46,7 +46,7 @@ desenha_fps = function()
 
 musica_puzzles = function()
 {
-    var _checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal);
+    var _checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal) ;
 	
     if (_checa_room_puzzle and current_music != snd_puzzles)
     {
@@ -57,7 +57,6 @@ musica_puzzles = function()
     }
 
     var _nao_checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal);
-    //show_debug_message("_nao_checa_room_puzzle: " + string(_nao_checa_room_puzzle));
 
     if (_nao_checa_room_puzzle and current_music == snd_puzzles)
     {
@@ -166,9 +165,7 @@ inicia_jogo		= function(_dados)
 				var _lay_player	= layer_create(-10000, "Player")
 				
 				//Cria o Player
-				var _player = instance_create_layer(62, 200, _lay_player, obj_player) ;
-				
-				//scr_player_layer() ;
+				var _player = instance_create_layer(523, 380, _lay_player, obj_player) ;
 			
 			}
 			else //Se eu tenho dados
