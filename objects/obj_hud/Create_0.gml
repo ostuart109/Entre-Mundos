@@ -46,9 +46,8 @@ desenha_fps = function()
 
 musica_puzzles = function()
 {
-    var _checa_room_puzzle = (room == Rm_1 or room == Rm_2);
-    //show_debug_message("_checa_room_puzzle: " + string(_checa_room_puzzle));
-
+    var _checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal);
+	
     if (_checa_room_puzzle and current_music != snd_puzzles)
     {
         //show_debug_message("ENTROU NO IF - vai tocar música");
@@ -57,7 +56,7 @@ musica_puzzles = function()
         current_music = snd_puzzles;
     }
 
-    var _nao_checa_room_puzzle = (room != Rm_1 and room != Rm_2);
+    var _nao_checa_room_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal);
     //show_debug_message("_nao_checa_room_puzzle: " + string(_nao_checa_room_puzzle));
 
     if (_nao_checa_room_puzzle and current_music == snd_puzzles)
