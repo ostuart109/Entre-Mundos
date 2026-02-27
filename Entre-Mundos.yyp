@@ -83,8 +83,13 @@
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_clouds-1.0.0","name":"io.gamemaker.gm_filter_clouds-1.0.0","path":"io.gamemaker.gm_filter_clouds-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_lut_colour-1.0.0","name":"io.gamemaker.gm_filter_lut_colour-1.0.0","path":"io.gamemaker.gm_filter_lut_colour-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_screenshake-1.0.0","name":"io.gamemaker.gm_filter_screenshake-1.0.0","path":"io.gamemaker.gm_filter_screenshake-1.0.0.yyp",},
   ],
-  "IncludedFiles":[],
+  "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"door-06.flac","CopyToMask":-1,"filePath":"datafiles","name":"door-06.flac","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+  ],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
@@ -135,6 +140,7 @@
     {"id":{"name":"sq_saves","path":"sequences/sq_saves/sq_saves.yy",},},
     {"id":{"name":"ogg_snd_monk_footstep_01","path":"sounds/ogg_snd_monk_footstep_01/ogg_snd_monk_footstep_01.yy",},},
     {"id":{"name":"ogg_snd_monk_footstep_02","path":"sounds/ogg_snd_monk_footstep_02/ogg_snd_monk_footstep_02.yy",},},
+    {"id":{"name":"snd_door","path":"sounds/snd_door/snd_door.yy",},},
     {"id":{"name":"snd_portal","path":"sounds/snd_portal/snd_portal.yy",},},
     {"id":{"name":"snd_puzzles","path":"sounds/snd_puzzles/snd_puzzles.yy",},},
     {"id":{"name":"snd_saves","path":"sounds/snd_saves/snd_saves.yy",},},
