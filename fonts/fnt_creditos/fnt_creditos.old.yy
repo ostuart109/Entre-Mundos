@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_saves",
+  "%Name":"fnt_creditos",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":13,
@@ -213,10 +213,10 @@
   "last":0,
   "lineHeight":16,
   "maintainGms1Font":false,
-  "name":"fnt_saves",
+  "name":"fnt_creditos",
   "parent":{
-    "name":"Saves",
-    "path":"folders/Font/MECANICAS/Menu/Saves.yy",
+    "name":"Creditos",
+    "path":"folders/Font/MECANICAS/Menu/Creditos.yy",
   },
   "pointRounding":0,
   "ranges":[

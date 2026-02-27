@@ -4,5 +4,3 @@
 cria_camera() ;
 
 #endregion
-
- 

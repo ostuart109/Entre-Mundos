@@ -1,5 +1,6 @@
 
 //Gerando o Player
+
 function scr_player_layer()
 {
 	//Gerando o player numa profundidade

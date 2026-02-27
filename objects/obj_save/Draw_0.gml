@@ -11,7 +11,7 @@ var _y		= y + _marg ;
 draw_text(_x, _y, "SAVE 0" + string(meu_save)) ;
 
 //Próximo texto deve variar entre new game ou continue
-var _texto2	= meus_dados != false ? "CONTINUE" : "NEW GAME" ; 
+var _texto2	= meus_dados != false ? "CONTINUAR" : "NOVO JOGO" ; 
 
 //Texto 2
 draw_text(_x, _y + 20, _texto2) ;

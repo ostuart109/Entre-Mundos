@@ -161,13 +161,16 @@ inicia_jogo		= function(_dados)
 			if (!_dados)
 			{
 				//vai pra Room 1
-				room_goto(Rm_1) ;
+				room_goto(rm_sala) ;
 				
 				//Layer do Player
 				var _lay_player	= layer_create(-10000, "Player")
 				
 				//Cria o Player
-				var _player = instance_create_layer(512, 320, _lay_player, obj_player) ;
+				var _player = instance_create_layer(62, 200, _lay_player, obj_player) ;
+				
+				//scr_player_layer() ;
+			
 			}
 			else //Se eu tenho dados
 			{
