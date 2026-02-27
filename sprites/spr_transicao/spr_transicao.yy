@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Mecanicas",
-    "path":"folders/Objects/Mecanicas.yy",
+    "name":"Transição",
+    "path":"folders/Objects/Mecanicas/Transição.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

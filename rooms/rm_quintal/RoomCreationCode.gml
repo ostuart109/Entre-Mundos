@@ -4,3 +4,6 @@
 scr_player_layer() ;
 
 #endregion
+
+// Creation Code da room
+global.room_name = "Quintal - Passado";

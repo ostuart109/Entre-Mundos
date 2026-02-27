@@ -10,10 +10,10 @@ draw_sprite_ext(sprite, image_index, x, y, xscale, image_yscale, image_angle, im
 //========================================================
 
 #region Usando Métodos
-
+/*
 //Desenhando o Atual Estado do Player
 desenha_estado() ;
-
+*/
 //========================================================
 
 #endregion

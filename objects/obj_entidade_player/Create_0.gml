@@ -198,24 +198,125 @@ viaja_tempo		= function()
 	
 	if (keyboard_check_released(ord("F")) xor keyboard_check_released(vk_space)) and delay_tempo <= 0
 	{
-		if (room == Rm_1 and (!place_meeting(x, y, obj_pode_viajar)))
+		//SALA
+		if (room == rm_sala and (!place_meeting(x, y, obj_pode_viajar)))
 		{
 			//Cria o portal
 			cria_portal() ;
 			
-			room_goto(Rm_2)
+			room_goto(rm_sala_presente)
 			
 			delay_tempo = delay_tempo_max //Resetanto o delay
 			opacidade_barra = opacidade_barra_max //Resetando Opacidade
 			cor_barra = c_red //Resetando a cor
 			
 		}
-		else if (room == Rm_2 and (!place_meeting(x, y, obj_pode_viajar)))
+		else if (room == rm_sala_presente and (!place_meeting(x, y, obj_pode_viajar)))
 		{
 			//Cria o portal
 			cria_portal() ;
 			
-			room_goto(Rm_1) ;
+			room_goto(rm_sala) ;
+			
+			delay_tempo = delay_tempo_max //Resetando o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+		}
+		
+		//CORREDOR
+		if (room == rm_corredor and (!place_meeting(x, y, obj_pode_viajar)))
+		{
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_corredor_presente)
+			
+			delay_tempo = delay_tempo_max //Resetanto o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+			
+		}
+		else if (room == rm_corredor_presente and (!place_meeting(x, y, obj_pode_viajar)))
+		{
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_corredor) ;
+			
+			delay_tempo = delay_tempo_max //Resetando o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+		}
+		
+		//QUARTO
+		if (room == rm_quarto and (!place_meeting(x, y, obj_pode_viajar)))
+		{
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_quarto_presente)
+			
+			delay_tempo = delay_tempo_max //Resetanto o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+			
+		}
+		else if (room == rm_quarto_presente and (!place_meeting(x, y, obj_pode_viajar)))
+		{
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_quarto) ;
+			
+			delay_tempo = delay_tempo_max //Resetando o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+		}
+		
+		//COZINHA
+		if (room == rm_cozinha and (!place_meeting(x, y, obj_pode_viajar)))
+		{	
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_cozinha_presente)
+			
+			delay_tempo = delay_tempo_max //Resetanto o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+			
+		}
+		else if (room == rm_cozinha_presente and (!place_meeting(x, y, obj_pode_viajar)))
+		{
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_cozinha) ;
+			
+			delay_tempo = delay_tempo_max //Resetando o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+		}
+		
+		//QUINTAL
+		if (room == rm_quintal and (!place_meeting(x, y, obj_pode_viajar)))
+		{	
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_quintal_presente)
+			
+			delay_tempo = delay_tempo_max //Resetanto o delay
+			opacidade_barra = opacidade_barra_max //Resetando Opacidade
+			cor_barra = c_red //Resetando a cor
+			
+		}
+		else if (room == rm_quintal_presente and (!place_meeting(x, y, obj_pode_viajar)))
+		{
+			//Cria o portal
+			cria_portal() ;
+			
+			room_goto(rm_quintal) ;
 			
 			delay_tempo = delay_tempo_max //Resetando o delay
 			opacidade_barra = opacidade_barra_max //Resetando Opacidade
@@ -416,26 +517,30 @@ animacao		= function()
 }
 
 
-//Desesnha o Tempo
+//Desenha o Tempo
 desenha_tempo = function()
 {
-	if (room == Rm_1)
+	if (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal or room == Rm_1 or room == Rm_2 or room == rm_sala_presente or room == rm_quintal_presente or room == rm_cozinha_presente or room == rm_corredor_presente)
 	{
-		draw_text(550, 20, "Presente")
-		
 		if (place_meeting(x, y, obj_pode_viajar))
 		{
-			draw_text(camera_get_view_width(view_camera[0])/2, camera_get_view_height(view_camera[0])/3, "Nao posso viajar aqui...")
+			draw_set_font(fnt_aviso) ;
+			
+			draw_text(camera_get_view_width(view_camera[0])/2 + 30, camera_get_view_height(view_camera[0])/2 - 30, "Não posso viajar aqui...")
+			
+			draw_set_font(-1); // ou -1 pra fonte padrão
 		}
 	}
-
-	if (room == Rm_2)
+	
+	if (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal or room == Rm_1 or room == Rm_2 or room == rm_sala_presente or room == rm_quintal_presente or room == rm_cozinha_presente or room == rm_corredor_presente)
 	{
-		draw_text(550, 20, "Passado")
-		
 		if (place_meeting(x, y, obj_pode_viajar))
 		{
-			draw_text(camera_get_view_width(view_camera[0])/2, camera_get_view_height(view_camera[0])/3, "Nao posso viajar aqui...")
+			draw_set_font(fnt_aviso) ;
+			
+			draw_text(camera_get_view_width(view_camera[0])/2 + 30, camera_get_view_height(view_camera[0])/2 - 30, "Não posso viajar aqui...")
+			
+			draw_set_font(-1); // ou -1 pra fonte padrão
 		}
 	}	
 }

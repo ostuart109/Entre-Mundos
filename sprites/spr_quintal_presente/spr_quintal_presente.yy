@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Futuro",
-    "path":"folders/Sprites/Level Design/Futuro.yy",
+    "name":"Presente",
+    "path":"folders/Sprites/Level Design/Presente.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

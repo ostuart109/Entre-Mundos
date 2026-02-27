@@ -9,8 +9,8 @@
   "name":"obj_transicao",
   "overriddenProperties":[],
   "parent":{
-    "name":"Mecanicas",
-    "path":"folders/Objects/Mecanicas.yy",
+    "name":"Transição",
+    "path":"folders/Objects/Mecanicas/Transição.yy",
   },
   "parentObjectId":null,
   "persistent":false,

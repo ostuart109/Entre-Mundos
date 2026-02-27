@@ -7,6 +7,9 @@ var _marg	= 10 ;
 var _x		= x + _marg ;
 var _y		= y + _marg ;
 
+//Cor
+draw_set_colour(c_white) ;
+	
 //Save
 draw_text(_x, _y, "SAVE 0" + string(meu_save)) ;
 
@@ -18,3 +21,4 @@ draw_text(_x, _y + 20, _texto2) ;
 
 //Resetando
 draw_set_font(-1) ;
+draw_set_colour(c_white) ;

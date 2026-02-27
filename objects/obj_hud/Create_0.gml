@@ -49,7 +49,7 @@ controla_musica = function()
     var _musica_alvo = -1;
     
     // Categorizando as salas por música
-    var _salas_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal or room == Rm_1 or room == Rm_2);
+    var _salas_puzzle = (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal or room == rm_sala_presente or room == rm_quintal_presente or room == rm_cozinha_presente or room == rm_corredor_presente or room == rm_quarto_presente);
     
     if (_salas_puzzle) 
     {
@@ -174,7 +174,7 @@ inicia_jogo		= function(_dados)
 			if (!_dados)
 			{
 				//vai pra Room 1
-				room_goto(rm_sala) ;
+				room_goto(rm_sala_presente) ;
 				
 				//Layer do Player
 				var _lay_player	= layer_create(-10000, "Player")
