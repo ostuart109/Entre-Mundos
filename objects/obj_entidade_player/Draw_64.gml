@@ -22,5 +22,4 @@ if room_name_alpha > 0
 	draw_set_font(-1); // ou -1 pra fonte padrão
 }
 
-//desenha Tempo
-desenha_tempo() ;
+desenha_tempo();

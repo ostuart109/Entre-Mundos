@@ -79,3 +79,26 @@ if room_name_timer > 0
     if room_name_timer < 60 // último segundo faz fade out
         room_name_alpha = room_name_timer / 60;
 }
+
+var nos_rooms_certos = (
+    room == rm_sala or room == rm_corredor or room == rm_quarto or
+    room == rm_cozinha or room == rm_quintal or room == rm_sala_presente or
+    room == rm_quintal_presente or room == rm_cozinha_presente or
+    room == rm_corredor_presente or room == rm_quarto_presente
+);
+
+if (nos_rooms_certos)
+{
+    if (place_meeting(x, y, obj_pode_viajar))
+    {
+        if (keyboard_check_released(ord("F")) xor keyboard_check_released(vk_space))
+        {
+            mensagem_tempo = mensagem_tempo_max;
+        }
+    }
+
+    if (mensagem_tempo > 0)
+    {
+        mensagem_tempo--;
+    }
+}

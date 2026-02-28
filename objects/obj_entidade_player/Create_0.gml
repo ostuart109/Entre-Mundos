@@ -84,14 +84,17 @@ npc_dialogo	= noone ;
 //Frame da animação de destruição (image_index manual)
 anim_destroi_frame = 0;
 
+//======================== Viajem ========================
+
+mensagem_tempo_max = game_get_speed(gamespeed_fps) * 1;
+
+mensagem_tempo     = 0;
 
 //=================== Audio andando ======================
-
 
 max_tempo	= game_get_speed(gamespeed_fps) * 0.5 ;
 
 tempo_audio = max_tempo;
-
 
 //====================== Mapeamento ======================
 
@@ -178,7 +181,7 @@ estado_movendo	= function()
 	if (tempo_audio <= 0)
 	{
 		var _som = random_range(ogg_snd_monk_footstep_01, ogg_snd_monk_footstep_02) ;
-		var _ganho =  random_range(1.0, 0.4)
+		var _ganho =  random_range(0.6, 0.4)
 		
 		audio_play_sound(_som, 5, 0, _ganho) ;
 		
@@ -327,7 +330,7 @@ viaja_tempo		= function()
 
 //Quinto Estado
 estado_dialogo = function()
-{
+{	
 	//Se eu tenho um npc
 	if (npc_dialogo)
 	{
@@ -516,33 +519,15 @@ animacao		= function()
 }
 }
 
-
-//Desenha o Tempo
+// Desenha o Tempo
 desenha_tempo = function()
 {
-	if (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal or room == Rm_1 or room == Rm_2 or room == rm_sala_presente or room == rm_quintal_presente or room == rm_cozinha_presente or room == rm_corredor_presente)
-	{
-		if (place_meeting(x, y, obj_pode_viajar))
-		{
-			draw_set_font(fnt_aviso) ;
-			
-			draw_text(camera_get_view_width(view_camera[0])/2 + 30, camera_get_view_height(view_camera[0])/2 - 30, "Não posso viajar aqui...")
-			
-			draw_set_font(-1); // ou -1 pra fonte padrão
-		}
-	}
-	
-	if (room == rm_sala or room == rm_corredor or room == rm_quarto or room == rm_cozinha or room == rm_quintal or room == Rm_1 or room == Rm_2 or room == rm_sala_presente or room == rm_quintal_presente or room == rm_cozinha_presente or room == rm_corredor_presente)
-	{
-		if (place_meeting(x, y, obj_pode_viajar))
-		{
-			draw_set_font(fnt_aviso) ;
-			
-			draw_text(camera_get_view_width(view_camera[0])/2 + 30, camera_get_view_height(view_camera[0])/2 - 30, "Não posso viajar aqui...")
-			
-			draw_set_font(-1); // ou -1 pra fonte padrão
-		}
-	}	
+    if (mensagem_tempo > 0)
+    {
+        draw_set_font(fnt_aviso);
+        draw_text(camera_get_view_width(view_camera[0]) / 2 + 30, camera_get_view_height(view_camera[0]) / 2 - 30, "Não posso viajar aqui...");
+        draw_set_font(-1);
+    }
 }
 
 desenha_estado	= function()
@@ -571,7 +556,7 @@ cria_portal = function()
 	instance_create_layer(x,y, _layer_portal, obj_portal) ;
 			
 	//toca o som do portal
-	audio_play_sound(snd_portal, 5, 0) ;
+	audio_play_sound(snd_portal, 5, 0, 0.2) ;
 }
 
 #endregion
