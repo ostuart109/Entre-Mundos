@@ -18,6 +18,8 @@ dialogo =
 	//Som do Texto
 	sound	: [snd_speech, snd_speech]
 }
+
+
 global.usou_desentupidor = true
 
 }

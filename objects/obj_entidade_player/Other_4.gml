@@ -5,7 +5,8 @@ room_name_alpha = 1;
 if global.usou_desentupidor
 {
 
-if (layer_exists("cozinha")) {
+if (layer_exists("cozinha")) 
+{
 var _layer = layer_get_id("cozinha");
 var _elementos = layer_get_all_elements(_layer);
 var _elemento = _elementos[0]; // pega o primeiro elemento da layer

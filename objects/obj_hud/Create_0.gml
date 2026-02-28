@@ -15,6 +15,14 @@ dados	= noone ;
 //Ainda não iniciei o jogo
 iniciei	= false ;
 
+// Timer do "Salvando..."
+mostrar_salvando = false;
+timer_salvando   = 0;
+TEMPO_SALVANDO   = game_get_speed(gamespeed_fps) * 3; // 3 segundos
+texto_alpha		= 1 ;
+salva_texto = "Salvando...";
+
+
 //========================================================
 
 #endregion
@@ -86,41 +94,26 @@ controla_musica = function()
 //Sistema de Save do Game JSON
 salva_jogo		= function(_save)
 {
-	//Alternando os saves
-	var _arquivo = "Meu Save" + string(_save+1) + ".json" ;	
-	
-	//Criando a Struct com os dados
-	var _dados = 
-	{
-		//Criando uma struct com os dados do player
-		player :
-		{
-			//Salvando a Posição do Player
-			meu_x		: obj_player.x,
-			meu_y		: obj_player.y,
-			
-			//Salvando a Room que o Player está
-			rm			: room,
-			
-			//Salvando o dialogo 
-			dialogo		:  global.npcs_destruidos,
-			
-		    // Salvando os saves usados
-		    saves       : global.saves_destruidos
-		}, 
-	}
-	
-	//Convertendo os dados em JSON
-	var _string = json_stringify(_dados) ;
-	
-	//Abrindo o meu arquivo
-	var _file	= file_text_open_write(_arquivo) ;
-	
-	//Gravando as informações nele
-	file_text_write_string(_file, _string) ;
-	
-	//Fechando o arquivo
-	file_text_close(_file) ;
+	var _arquivo = "Meu Save" + string(_save+1) + ".json";
+    var _dados =
+    {
+        player :
+        {
+            meu_x   : obj_player.x,
+            meu_y   : obj_player.y,
+            rm      : room,
+            dialogo : global.npcs_destruidos,
+            saves   : global.saves_destruidos
+        },
+    }
+    var _string = json_stringify(_dados);
+    var _file   = file_text_open_write(_arquivo);
+    file_text_write_string(_file, _string);
+    file_text_close(_file);
+
+    // Reseta o timer ao salvar
+    mostrar_salvando = true;
+    timer_salvando   = TEMPO_SALVANDO;
 }
 
 //Carregando o jogo do JSON

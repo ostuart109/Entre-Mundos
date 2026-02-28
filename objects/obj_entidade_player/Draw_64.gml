@@ -8,7 +8,6 @@ if trans_alpha > 0
     draw_set_alpha(1);
 }
 
-
 //Desenhando o nome da room
 if room_name_alpha > 0
 {
