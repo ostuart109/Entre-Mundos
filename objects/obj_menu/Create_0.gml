@@ -1,6 +1,16 @@
+#region Iniciando Variáveis
+
+//======================== TITULO ========================
+
 titulo_timer	= 0 ;
 
 creditos_timer	= 0 ;
+
+//========================================================
+
+#endregion
+
+#region Iniciando métodos
 
 desenha_titulo = function()
 {
@@ -54,3 +64,5 @@ desenha_creditos = function()
 	draw_set_font(-1) ;		
 	draw_set_colour(c_white) ;
 }
+
+#endregion

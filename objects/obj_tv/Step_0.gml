@@ -1,2 +1,6 @@
-// No objeto - Step Event
-depth = -(y + sprite_height - sprite_yoffset); // base real do sprite
+#region Usando Métodos
+
+//Profundidade da tv
+profundidade() ;
+
+#endregion
