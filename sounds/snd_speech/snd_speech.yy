@@ -15,7 +15,7 @@
   "name":"snd_speech",
   "parent":{
     "name":"Text Box",
-    "path":"folders/Sounds/Text Box.yy",
+    "path":"folders/Sounds/Mecanicas/Text Box.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

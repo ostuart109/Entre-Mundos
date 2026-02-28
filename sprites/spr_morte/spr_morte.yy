@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Morte",
-    "path":"folders/Sprites/Morte.yy",
+    "name":"Obstáculos",
+    "path":"folders/Sprites/Mecanicas/Obstáculos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

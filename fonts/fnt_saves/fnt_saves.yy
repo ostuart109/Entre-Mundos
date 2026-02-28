@@ -216,7 +216,7 @@
   "name":"fnt_saves",
   "parent":{
     "name":"Saves",
-    "path":"folders/Font/MECANICAS/Menu/Saves.yy",
+    "path":"folders/Font/Menu/Saves.yy",
   },
   "pointRounding":0,
   "ranges":[

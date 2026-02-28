@@ -9,8 +9,8 @@
   "name":"obj_desentupidor",
   "overriddenProperties":[],
   "parent":{
-    "name":"Missões",
-    "path":"folders/Objects/Missões.yy",
+    "name":"Cozinha",
+    "path":"folders/Objects/Presente/Missões/Cozinha.yy",
   },
   "parentObjectId":null,
   "persistent":false,

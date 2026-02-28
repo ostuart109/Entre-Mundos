@@ -216,7 +216,7 @@
   "name":"fnt_creditos",
   "parent":{
     "name":"Creditos",
-    "path":"folders/Font/MECANICAS/Menu/Creditos.yy",
+    "path":"folders/Font/Menu/Creditos.yy",
   },
   "pointRounding":0,
   "ranges":[

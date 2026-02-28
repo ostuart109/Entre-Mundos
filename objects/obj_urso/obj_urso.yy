@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Ursinho",
-    "path":"folders/Objects/Porao/Ursinho.yy",
+    "path":"folders/Objects/Presente/Porao/Ursinho.yy",
   },
   "parentObjectId":null,
   "persistent":false,

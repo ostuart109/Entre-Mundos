@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Viaja Tempo",
-    "path":"folders/Sprites/Viaja Tempo.yy",
+    "path":"folders/Sprites/Mecanicas/Viaja Tempo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

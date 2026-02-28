@@ -9,8 +9,8 @@
   "name":"obj_cofre_presente",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objects/Presente/Objetos.yy",
+    "name":"Quarto",
+    "path":"folders/Objects/Presente/Missões/Quarto.yy",
   },
   "parentObjectId":null,
   "persistent":false,

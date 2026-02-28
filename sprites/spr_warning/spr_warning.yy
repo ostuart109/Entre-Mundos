@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Obstáculos",
-    "path":"folders/Sprites/Obstáculos.yy",
+    "path":"folders/Sprites/Mecanicas/Obstáculos.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

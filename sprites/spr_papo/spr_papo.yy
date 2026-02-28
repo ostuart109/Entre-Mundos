@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Papo_Furado",
-    "path":"folders/Sprites/Papo_Furado.yy",
+    "path":"folders/Sprites/Mecanicas/Papo_Furado.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -15,7 +15,7 @@
   "name":"ogg_snd_monk_footstep_02",
   "parent":{
     "name":"Passos",
-    "path":"folders/Sounds/Passos.yy",
+    "path":"folders/Sounds/Player/Passos.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -99,7 +99,7 @@
   "name":"fnt_titulo_game",
   "parent":{
     "name":"Título",
-    "path":"folders/Font/MECANICAS/Menu/Título.yy",
+    "path":"folders/Font/Menu/Título.yy",
   },
   "pointRounding":0,
   "ranges":[

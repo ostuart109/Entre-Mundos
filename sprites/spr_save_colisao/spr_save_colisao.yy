@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Save colisao",
-    "path":"folders/Sprites/MENU/Save colisao.yy",
+    "path":"folders/Sprites/Mecanicas/Save colisao.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

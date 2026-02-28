@@ -1,3 +1,5 @@
+//==================== MENU SEQUENCE =====================
+
 // Auto-generated stubs for each available event.
 
 function sq_saves_event_create()
@@ -42,3 +44,5 @@ function sq_saves_event_async_system()
 {
 
 }
+
+//========================================================

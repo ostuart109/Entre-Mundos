@@ -15,7 +15,7 @@
   "name":"snd_portal",
   "parent":{
     "name":"Portal",
-    "path":"folders/Sounds/Portal.yy",
+    "path":"folders/Sounds/Mecanicas/Portal.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

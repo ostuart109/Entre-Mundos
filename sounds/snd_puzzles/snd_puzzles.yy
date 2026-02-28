@@ -15,7 +15,7 @@
   "name":"snd_puzzles",
   "parent":{
     "name":"Puzzles",
-    "path":"folders/Sounds/Puzzles.yy",
+    "path":"folders/Sounds/Mecanicas/Puzzles.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

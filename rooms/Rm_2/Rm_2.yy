@@ -16,8 +16,6 @@
     {"name":"inst_14C31C69","path":"rooms/Rm_2/Rm_2.yy",},
     {"name":"inst_13CEA961","path":"rooms/Rm_2/Rm_2.yy",},
     {"name":"inst_4EAE4219","path":"rooms/Rm_2/Rm_2.yy",},
-    {"name":"inst_316C4425","path":"rooms/Rm_2/Rm_2.yy",},
-    {"name":"inst_9E540C3","path":"rooms/Rm_2/Rm_2.yy",},
     {"name":"inst_20608B88","path":"rooms/Rm_2/Rm_2.yy",},
   ],
   "isDnd":false,
@@ -41,10 +39,7 @@
         {"$GMRInstance":"v4","%Name":"inst_13CEA961","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_13CEA961","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":2.0,"x":960.0,"y":416.0,},
       ],"layers":[],"name":"Colisao","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"inimigos","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_316C4425","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_316C4425","objectId":{"name":"obj_inimigos","path":"objects/obj_inimigos/obj_inimigos.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":320.0,},
-        {"$GMRInstance":"v4","%Name":"inst_9E540C3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9E540C3","objectId":{"name":"obj_inimigos","path":"objects/obj_inimigos/obj_inimigos.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":448.0,},
-      ],"layers":[],"name":"inimigos","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"inimigos","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"inimigos","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Asset_cuidado","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_782BEEAC","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_782BEEAC","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_warning","path":"sprites/spr_warning/spr_warning.yy",},"x":480.0,"y":192.0,},
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_16CFA7E6","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_16CFA7E6","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_warning","path":"sprites/spr_warning/spr_warning.yy",},"x":736.0,"y":416.0,},
@@ -54,7 +49,7 @@
   "name":"Rm_2",
   "parent":{
     "name":"Salas",
-    "path":"folders/Rooms/Salas.yy",
+    "path":"folders/Rooms/Teste/Salas.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

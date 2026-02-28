@@ -45,7 +45,7 @@
   "origin":0,
   "parent":{
     "name":"Text Box",
-    "path":"folders/Sprites/Text Box.yy",
+    "path":"folders/Sprites/Mecanicas/Text Box.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

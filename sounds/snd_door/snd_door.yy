@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_door",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Porta",
+    "path":"folders/Sounds/Mecanicas/Porta.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

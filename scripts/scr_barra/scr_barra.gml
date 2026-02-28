@@ -1,3 +1,5 @@
+//==================== Limitando Portal ==================
+
 /// barra_recarga(x, y, largura, altura, atual, maximo, cor, opacidade)
 function barra_recarga(_x, _y, _largura, _altura, _atual, _maximo, _cor, _opacidade) {
     var _preenchimento = 1 - (_atual / _maximo);
@@ -19,3 +21,5 @@ function barra_recarga(_x, _y, _largura, _altura, _atual, _maximo, _cor, _opacid
     draw_set_alpha(1); // Reseta a opacidade
     draw_set_color(c_white);
 }
+
+//========================================================

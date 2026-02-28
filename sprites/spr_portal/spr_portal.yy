@@ -42,7 +42,7 @@
   "origin":4,
   "parent":{
     "name":"Portal",
-    "path":"folders/Sprites/Viaja Tempo/Portal.yy",
+    "path":"folders/Sprites/Mecanicas/Viaja Tempo/Portal.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

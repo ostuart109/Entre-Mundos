@@ -1,6 +1,7 @@
 
-//Gerando o Player
+//======================= PLAYER =========================
 
+//Gerando o Player
 function scr_player_layer()
 {
 	//Gerando o player numa profundidade
@@ -24,3 +25,5 @@ function scr_player_layer()
 		}
 	}
 }
+
+//========================================================
