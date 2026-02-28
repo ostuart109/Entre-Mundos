@@ -10,7 +10,6 @@
     {"name":"inst_13CEA961_1_3","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
     {"name":"inst_316C4425_1_3","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
     {"name":"inst_9E540C3_1_3","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
-    {"name":"inst_20608B88_1_3","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
     {"name":"inst_361F907D2","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
     {"name":"inst_1CA8BC6E","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
     {"name":"inst_4D2ACC3A","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
@@ -19,6 +18,7 @@
     {"name":"inst_1A750E6F","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
     {"name":"inst_9058CF5","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
     {"name":"inst_9523B54","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
+    {"name":"inst_16A9E808","path":"rooms/rm_porao_presente/rm_porao_presente.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -31,10 +31,10 @@
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"dialogo","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_9058CF5","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9058CF5","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.0,"scaleY":4.0,"x":96.0,"y":512.0,},
-        {"$GMRInstance":"v4","%Name":"inst_9523B54","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9523B54","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":4.0,"x":960.0,"y":512.0,},
+        {"$GMRInstance":"v4","%Name":"inst_9523B54","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_9523B54","objectId":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":4.0,"x":1088.0,"y":512.0,},
       ],"layers":[],"name":"dialogo","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"save","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_20608B88_1_3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_20608B88_1_3","objectId":{"name":"obj_save_colisao","path":"objects/obj_save_colisao/obj_save_colisao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.5,"scaleY":4.0,"x":0.0,"y":256.0,},
+        {"$GMRInstance":"v4","%Name":"inst_16A9E808","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16A9E808","objectId":{"name":"obj_save_colisao","path":"objects/obj_save_colisao/obj_save_colisao.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":4.0,"x":192.0,"y":256.0,},
       ],"layers":[],"name":"save","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"pode_viajar","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"pode_viajar","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Colisao","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
