@@ -50,14 +50,16 @@ libera_player = function()
 	{
 		with(player)
 		{
-			//Deleta o NPC após o diálogo e salva na lista para não voltar
+			//Deleta o NPC após o diálogo e salva na lista (apenas se 'destruir_npc' for verdadeiro no NPC)
 			if (instance_exists(npc_dialogo))
-            {
-                //Salva o ID fixo (posição) em vez do ID de instância
-                array_push(global.npcs_destruidos, npc_dialogo.meu_id) ;
-                instance_destroy(npc_dialogo) ;
-                npc_dialogo = noone ;
-            }
+			{
+				if (npc_dialogo.destruir_npc)
+				{
+					array_push(global.npcs_destruidos, npc_dialogo.meu_id) ;
+					instance_destroy(npc_dialogo) ;
+				}
+				npc_dialogo = noone ;
+			}
 			
 			//Ele vai pro estado parado
 			estado = estado_parado ;
@@ -126,8 +128,8 @@ cria_dialogo = function(_dialogo)
 	//Só faço tudo que estar em baixo, se eu já terminei a animação
 	if (escala_caixa >= 1)
 	{
-		//Sempre que eu apertar Enter, Espaço ou F
-		var _avancar = keyboard_check_released(vk_enter) or keyboard_check_released(vk_space) or keyboard_check_released(ord("F")) ;
+		//Sempre que eu apertar Enter, Espaço ou Clique
+		var _avancar = keyboard_check_released(vk_enter) or keyboard_check_released(vk_space) or mouse_check_button_released(mb_left) ;
 		
 		if (_avancar)
 		{

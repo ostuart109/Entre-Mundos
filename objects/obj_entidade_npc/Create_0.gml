@@ -18,6 +18,10 @@ larg	= 33 ;
 alt		= -5 ;
 margem	= 0 ;
 
+// Configuração de ativação
+ativacao_por_toque = true ; // Por padrão, ativa ao encostar.
+destruir_npc = true ; // Por padrão, o NPC se destrói após o diálogo.
+
 //=================== Text Box Estrutura =================
 
 //Estrutura do dialogo
@@ -79,16 +83,36 @@ dialogo_area = function()
 	//Se o player está colidindo na area
 	if (_player)
 	{
-		with(_player)
+		var _interagir = false ;
+		
+		// Se for automático, basta encostar
+		if (ativacao_por_toque) 
 		{
-			//Se o Gemaplys não esta no estado de dialogo
-			if (estado != estado_dialogo)
+			_interagir = true ;
+		}
+		// Se não, precisa clicar ou falar
+		else
+		{
+			if (keyboard_check_released(vk_enter) or keyboard_check_released(vk_space) or mouse_check_button_released(mb_left))
 			{
-				//Gemaplys entra no estado de dialogo
-				estado = estado_dialogo ;
-				
-				//Passando que é o npc desse dialogo
-				npc_dialogo = other.id ;
+				_interagir = true ;
+			}
+		}
+
+		// Inicia o diálogo se a condição de interação for atendida
+		if (_interagir)
+		{
+			with(_player)
+			{
+				//Se o Gemaplys não esta no estado de dialogo
+				if (estado != estado_dialogo)
+				{
+					//Gemaplys entra no estado de dialogo
+					estado = estado_dialogo ;
+					
+					//Passando que é o npc desse dialogo
+					npc_dialogo = other.id ;
+				}
 			}
 		}
 	}

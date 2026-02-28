@@ -102,3 +102,4 @@ if (nos_rooms_certos)
         mensagem_tempo--;
     }
 }
+

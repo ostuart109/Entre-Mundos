@@ -199,7 +199,7 @@ viaja_tempo		= function()
 		// Sai da função sem processar movimento
 	}
 	
-	if (keyboard_check_released(ord("F")) xor keyboard_check_released(vk_space)) and delay_tempo <= 0
+	if (keyboard_check_released(ord("F"))) and delay_tempo <= 0
 	{
 		//SALA
 		if (room == rm_sala and (!place_meeting(x, y, obj_pode_viajar)))
