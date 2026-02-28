@@ -1,4 +1,4 @@
-ativacao_por_toque = true; 
+ativacao_por_toque = false; 
 
 if global.usou_desentupidor
 {

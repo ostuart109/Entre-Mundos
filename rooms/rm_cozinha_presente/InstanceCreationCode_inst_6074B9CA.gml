@@ -1,4 +1,4 @@
-ativacao_por_toque = true; 
+ativacao_por_toque = false; 
 
 if global.usou_desentupidor
 {
@@ -17,11 +17,12 @@ if global.usou_desentupidor
 else
 {
 	destruir_npc = false;
+	
 	//Estrutura do dialogo
 	dialogo = 
 	{
 		//Texto do dialogo
-		texto	: ["Preciso limpar essa bagunça..."],
+		texto	: ["Eu devo limpar essa bagunça primeiro"],
 		//Sprite de quem ta falandos
 		//sprite	: [spr_text_box, spr_text_box],
 		//Velocidade do Texto
@@ -30,4 +31,3 @@ else
 		sound	: [snd_speech]
 	}
 }
-
