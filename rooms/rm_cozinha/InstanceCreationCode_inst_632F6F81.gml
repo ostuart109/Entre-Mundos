@@ -1,5 +1,5 @@
 
-destruir_npc = false;
+
 ativacao_por_toque = false; 
 
 
@@ -18,11 +18,12 @@ dialogo =
 	//Som do Texto
 	sound	: [snd_speech, snd_speech]
 }
-
+global.usou_desentupidor = true
 
 }
 else
 {
+destruir_npc = false;
 //Estrutura do dialogo
 dialogo = 
 {
@@ -36,10 +37,12 @@ dialogo =
 	sound	: [snd_speech, snd_speech]
 }
 
+
+
+
 }
 
 
 
-global.usou_desentupidor = true
 
 
