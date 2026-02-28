@@ -6,8 +6,8 @@
   "name":"obj_pode_viajar",
   "overriddenProperties":[],
   "parent":{
-    "name":"Viaja Tempo",
-    "path":"folders/Objects/Viaja Tempo.yy",
+    "name":"Não pode viajar",
+    "path":"folders/Objects/Viaja Tempo/Não pode viajar.yy",
   },
   "parentObjectId":null,
   "persistent":false,

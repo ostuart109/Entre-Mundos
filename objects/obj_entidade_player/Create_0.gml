@@ -1,12 +1,13 @@
+#region Iniciando Variáveis
+
 //====================== VELOCIDADE ======================
 
 //Variáveis velocidade
-
 velh	= 0 ;
 velv	= 0 ;
-
 max_vel	= 3 ;
 
+//======================== ROOM ==========================
 
 // Transição de Room
 tp_cooldown = 0;
@@ -21,6 +22,8 @@ room_name_text  = "";
 room_name_timer = 0;
 room_name_alpha = 0;
 
+//======================= PORTAL =========================
+
 //Delay do Sistema de viagem temporal
 delay_tempo_max = 60 * 2; //Multiplicando o valor por segundos.
 delay_tempo = delay_tempo_max; //Aplicando delay
@@ -30,6 +33,11 @@ opacidade_barra_max = 0.8
 opacidade_barra = opacidade_barra_max
 cor_barra = c_red
 
+//======================== Viajem ========================
+
+mensagem_tempo_max = game_get_speed(gamespeed_fps) * 1;
+
+mensagem_tempo     = 0;
 
 //====================== Animações =======================
 
@@ -79,17 +87,6 @@ estado_txt = noone ;
 //inicia sem estar com dialogo
 npc_dialogo	= noone ;
 
-//======================== Vida ==========================
-
-//Frame da animação de destruição (image_index manual)
-anim_destroi_frame = 0;
-
-//======================== Viajem ========================
-
-mensagem_tempo_max = game_get_speed(gamespeed_fps) * 1;
-
-mensagem_tempo     = 0;
-
 //=================== Audio andando ======================
 
 max_tempo	= game_get_speed(gamespeed_fps) * 0.5 ;
@@ -98,27 +95,21 @@ tempo_audio = max_tempo;
 
 //====================== Mapeamento ======================
 
-
 //Mapeando as teclas
 keyboard_set_map(ord("W"), vk_up) ;		//Cima
 keyboard_set_map(ord("A"), vk_left) ;	//Baixo
 keyboard_set_map(ord("S"), vk_down) ;	//Esquerda
 keyboard_set_map(ord("D"), vk_right) ;	//Direita
 
+//========================================================
+
+#endregion
+
 #region Criando Estados
 	
 //Primeiro Estado
 estado_parado    = function()
 {
-	// SE ESTIVER EM DIÁLOGO, NÃO PROCESSAR INPUTS
-	//if (estado == estado_dialogo)
-	//{
-	//    return; 
-	////	// Sai da função sem processar movimento
-	//}
-	
-	
-	
 	//ele mostra o estado dele parado
 	estado_txt = "parado" ;
 	
@@ -136,14 +127,9 @@ estado_parado    = function()
 	{
 		if estado != estado_dialogo
 		{
-		
-		
 	    //estou me movendo
 	    estado = estado_movendo ;
-		
-		
 		}
-		
 	}
 }
 	
@@ -380,7 +366,8 @@ estado = estado_parado ;
 
 #region Criando Métodos
 
-colisao = function()
+//Colisão
+colisao						= function()
 {
 	//Colisão Horizontal
 	if (place_meeting(x + velh, y, obj_colisao))
@@ -423,105 +410,105 @@ colisao = function()
 	y += velv ;
 }
 
-animacao		= function()
+//Animação das Sprites
+animacao					= function()
 {
 	//Sistema de animação
-	
 	if global.dialogo_aberto == false
 	{
-	//Variáveis de Movimentação
-	var _up		= keyboard_check(vk_up) ;
-	var _left	= keyboard_check(vk_left) ;
-	var _down	= keyboard_check(vk_down) ;
-	var _right	= keyboard_check(vk_right) ;
+		//Variáveis de Movimentação
+		var _up		= keyboard_check(vk_up) ;
+		var _left	= keyboard_check(vk_left) ;
+		var _down	= keyboard_check(vk_down) ;
+		var _right	= keyboard_check(vk_right) ;
 	
-	
-	//Ajustando a face	
-	//A ordem vai definir as prioridades
-	//Se ir para cima
-	if (_up)
-	{	
-		//Então
-		//Ele olha pra cima
-	    face = 1 ;
-	}
-	//Se ir para baixo
-	if (_down)
-	{
-		//Então
-		//Ele olha pra baixo
-	    face = 3 ;
-	}
-	//Se ir pra esquerda
-	if (_left)
-	{
-		//Então
-		//Ele olha pra esquerda
-	    face    = 2 ;
+		//Ajustando a face	
+		//A ordem vai definir as prioridades
+		//Se ir para cima
+		if (_up)
+		{	
+			//Então
+			//Ele olha pra cima
+		    face = 1 ;
+		}
+		//Se ir para baixo
+		if (_down)
+		{
+			//Então
+			//Ele olha pra baixo
+		    face = 3 ;
+		}
+		//Se ir pra esquerda
+		if (_left)
+		{
+			//Então
+			//Ele olha pra esquerda
+		    face    = 2 ;
 		
-		//E a escala x da imagem é 1
-	    xscale  = -1 ;
-	}
-	//Se ir pra direita
-	if (_right)
-	{
-		//Então
-		//Ele olha pra direita
-	    face	= 0 ;
+			//E a escala x da imagem é 1
+		    xscale  = -1 ;
+		}
+		//Se ir pra direita
+		if (_right)
+		{
+			//Então
+			//Ele olha pra direita
+		    face	= 0 ;
 		
-		//E a escala x da imagem é 1
-	    xscale	= 1 ;
-	}
+			//E a escala x da imagem é 1
+		    xscale	= 1 ;
+		}
 	
-	//Se eu apertar todos ao mesmo tempo
-	//ele da prioridade a direita
+		//Se eu apertar todos ao mesmo tempo
+		//ele da prioridade a direita
 	
-	//Se voce clicar pra cima/baixo
-	//ou clicar pra esquerda/direita
-	if ((_up xor _down) or (_left xor _right))
-	{
-		//Point Direction
-	    //x1 - meu ponto inicial de base (0,0)
-	    //y1 - meu ponto inicial de base (0,0)
-	    //x2 - meu destino (se estou indo para a direita tem que ser 1)
-	    //y2 - meu destino (se estou indo para a esquerda tem que ser 0)
-	    //é como isso:
-	    //    0      -    1        = -1 
-	    //(_right - _left) ;
-	    //(_down  - _up) ;
-	    //Isso vai falar a nossa direção
-	    var _dir = point_direction(0,0,(_right - _left),(_down - _up)) ;
+		//Se voce clicar pra cima/baixo
+		//ou clicar pra esquerda/direita
+		if ((_up xor _down) or (_left xor _right))
+		{
+			//Point Direction
+		    //x1 - meu ponto inicial de base (0,0)
+		    //y1 - meu ponto inicial de base (0,0)
+		    //x2 - meu destino (se estou indo para a direita tem que ser 1)
+		    //y2 - meu destino (se estou indo para a esquerda tem que ser 0)
+		    //é como isso:
+		    //    0      -    1        = -1 
+		    //(_right - _left) ;
+		    //(_down  - _up) ;
+		    //Isso vai falar a nossa direção
+		    var _dir = point_direction(0,0,(_right - _left),(_down - _up)) ;
 	
-		//Pegando o valor do velh
-	    //len    - distância que ele se move
-	    //dir    - distância que ele está indo
-	    var _max_velh = lengthdir_x(max_vel, _dir) ; //0 ou 5
+			//Pegando o valor do velh
+		    //len    - distância que ele se move
+		    //dir    - distância que ele está indo
+		    var _max_velh = lengthdir_x(max_vel, _dir) ; //0 ou 5
 
-	    //velh        - velocidade inicial
-	    //_max_velh - velocidade maximo
-	    velh = _max_velh ;
+		    //velh        - velocidade inicial
+		    //_max_velh - velocidade maximo
+		    velh = _max_velh ;
 	
-	    //Pegando o valor do velv
-	    //len    - distância que ele se move
-	    //dir    - distância que ele está indo
-	    var _max_velv = lengthdir_y(max_vel, _dir) ; //0 ou 5
+		    //Pegando o valor do velv
+		    //len    - distância que ele se move
+		    //dir    - distância que ele está indo
+		    var _max_velv = lengthdir_y(max_vel, _dir) ; //0 ou 5
 	
-	    //velv        - velocidade inicial
-	    //_max_velv - velocidade maximo
-	    velv = _max_velv ;
+		    //velv        - velocidade inicial
+		    //_max_velv - velocidade maximo
+		    velv = _max_velv ;
+		}
+		else //Não estou apertando nenhuma tecla de movimento
+		{
+		    //Perdendo a velocidade
+		    velh = 0 ;
+		    velv = 0 ;
+		}	
 	}
-	else //Não estou apertando nenhuma tecla de movimento
-	{
-	    //Perdendo a velocidade
-	    velh = 0 ;
-	    velv = 0 ;
-	}	
-}
 }
 
-// Desenha o Tempo
-desenha_tempo = function()
+//Desenha o Tempo
+desenha_tempo				= function()
 {
+	//Impedindo o player de viajar onde tem colisão
     if (mensagem_tempo > 0)
     {
         draw_set_font(fnt_aviso);
@@ -530,7 +517,8 @@ desenha_tempo = function()
     }
 }
 
-desenha_estado	= function()
+//DEBUG pra desenhar os estados
+desenha_estado				= function()
 {
 	//Centralizando
 	draw_set_valign(1) ;
@@ -547,7 +535,7 @@ desenha_estado	= function()
 }
 
 //Isso cria o portal
-cria_portal = function()
+cria_portal					= function()
 {
 	//Layer do Portal
 	var _layer_portal = layer_create(depth + 1, "Portal");
@@ -559,6 +547,169 @@ cria_portal = function()
 	audio_play_sound(snd_portal, 5, 0, 0.2) ;
 }
 
+//Transição de Room
+transicao_room				= function()
+{
+	//transição
+	if tp_cooldown > 0 tp_cooldown--;
+
+	if transition == 1
+	{
+	    trans_alpha += 0.05;
+	    if trans_alpha >= 1
+	    {
+	        trans_alpha = 1;
+	        transition  = 2;
+	        x = next_x;
+	        y = next_y;
+	        room_goto(next_room);
+	    }
+	}
+
+	if transition == 2
+	{
+	    trans_alpha -= 0.05;
+	    if trans_alpha <= 0
+	    {
+	        trans_alpha = 0;
+	        transition  = 0;
+	    }
+	}
+}
+
+//Profundidade do Player
+profundidade				= function()
+{
+	//profundidade
+	depth = -(y + sprite_height - sprite_yoffset);
+}
+
+//Evitando o pulo
+evita_pulo					= function()
+{
+	// Sincronizando o sprite_index para que o image_index respeite a quantidade de frames de cada sprite
+	// Isso evita o "pulo" na animação quando trocamos de sprites com números de frames diferentes
+	// Sem isso, o image_index vai bugar todo
+	if (sprite_index != sprite)
+	{
+	    sprite_index = sprite;
+	    image_index = 0;
+	}
+}
+
+//Mostrando o nome da room
+nome_da_room				= function()
+{
+	//Fazendo o nome da room desaparecer
+	if room_name_timer > 0
+	{
+	    room_name_timer--;
+	    if room_name_timer < 60 // último segundo faz fade out
+	        room_name_alpha = room_name_timer / 60;
+	}
+
+	var nos_rooms_certos = (
+	    room == rm_sala or room == rm_corredor or room == rm_quarto or
+	    room == rm_cozinha or room == rm_quintal or room == rm_sala_presente or
+	    room == rm_quintal_presente or room == rm_cozinha_presente or
+	    room == rm_corredor_presente or room == rm_quarto_presente
+	);
+
+	if (nos_rooms_certos)
+	{
+	    if (place_meeting(x, y, obj_pode_viajar))
+	    {
+	        if (keyboard_check_released(ord("F")) xor keyboard_check_released(vk_space))
+	        {
+	            mensagem_tempo = mensagem_tempo_max;
+	        }
+	    }
+
+	    if (mensagem_tempo > 0)
+	    {
+	        mensagem_tempo--;
+	    }
+	}	
+}
+
+//Zerando a velocidade se o dialogo estiver aberto
+dialogo_aberto				= function()
+{
+	//Zerando a velocidade se o dialogo estiver aberto
+	if global.dialogo_aberto == true
+	{
+		velh = 0
+		velv = 0
+
+		//estado = estado_parado 	// Removido para permitir estado_dialogo
+	}
+	else
+	{
+
+	}
+}
+
+//Limitando a velocidade diagonal do player
+limita_velocidade_diagonal	= function()
+{
+	//Limita Velocidade diagonal
+	velh = clamp(velh, -max_vel, max_vel);
+	velv = clamp(velv, -max_vel, max_vel);
+}
+
+//Limitando o tempo do delay da barra
+barra_delay_limite			= function()
+{
+	delay_tempo = clamp(delay_tempo, 0, delay_tempo_max );
+}
+
+//Desenhando a barra de delay
+desenha_barra				= function()
+{
+	//Fazendo a barra sumir (Que aberração eu criei? Mas funciona né)
+	if delay_tempo == 0
+	opacidade_barra -= 0.02;
+
+	//Mudando a barra pra Yellow na metade
+	if delay_tempo < delay_tempo_max / 2
+	cor_barra = c_yellow 
+
+	//Mudando a barra para aqua lá no finalzinho
+	if delay_tempo < delay_tempo_max / 20
+	cor_barra = c_aqua
+
+	//Desenhando a barra
+	barra_recarga(x - 30, y - 60, 64, 4, delay_tempo, delay_tempo_max, cor_barra, opacidade_barra);
+}
+
+//Desenhando o nome da room
+desenha_nome_room			= function()
+{
+	//Desenhando o nome da room
+	if room_name_alpha > 0
+	{
+	    draw_set_alpha(room_name_alpha);
+	    draw_set_color(c_white);
+	    draw_set_font(fnt_text_box); // ou -1 pra fonte padrão
+	    draw_set_halign(fa_left);
+	    draw_set_valign(fa_top);
+	    draw_text(16, 16, room_name_text);
+	    draw_set_alpha(1);
+		draw_set_font(-1); // ou -1 pra fonte padrão
+	}
+}
+
+//Desenhando a transição
+desenha_transicao			= function()
+{
+	//Desenhando a transição
+	if trans_alpha > 0
+	{
+	    draw_set_alpha(trans_alpha);
+	    draw_set_color(c_black);
+	    draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
+	    draw_set_alpha(1);
+	}
+}
+
 #endregion
-
-

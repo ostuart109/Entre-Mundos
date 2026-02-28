@@ -6,11 +6,10 @@ colisao() ;
 // Usando os Estados
 estado();
 
-//Limita Velocidade diagonal
-velh = clamp(velh, -max_vel, max_vel);
-velv = clamp(velv, -max_vel, max_vel);
+//Limitando a velocidade diagonal do player
+limita_velocidade_diagonal() ;
 
-delay_tempo = clamp(delay_tempo, 0, delay_tempo_max );
-
+//Limitando o tempo do delay da barra
+barra_delay_limite() ;
 
 #endregion

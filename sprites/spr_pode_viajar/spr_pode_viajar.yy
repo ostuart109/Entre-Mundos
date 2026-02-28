@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Viaja Tempo",
-    "path":"folders/Sprites/Mecanicas/Viaja Tempo.yy",
+    "name":"Não pode colidir",
+    "path":"folders/Sprites/Mecanicas/Viaja Tempo/Não pode colidir.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

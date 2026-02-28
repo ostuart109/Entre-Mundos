@@ -1,4 +1,6 @@
-if (keyboard_check_released(vk_space))
-{
-	image_index = 1 ;
-}
+#region Usando Métodos
+
+//Abrindo Cofre
+cofre_abre() ;
+
+#endregion

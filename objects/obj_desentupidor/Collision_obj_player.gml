@@ -1,6 +1,6 @@
+#region Usando Métodos
 
-if keyboard_check_pressed(vk_space)
-{
-	global.tem_desentupidor = true
-	instance_destroy();
-}
+//Desentupindo a pia
+desentope_pia() ;
+
+#endregion

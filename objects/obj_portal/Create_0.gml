@@ -1,4 +1,8 @@
+#region Iniciando Variáveis
+
 sprite = sprite_index ;
+
+#endregion
 
 #region Iniciando Métodos
 
