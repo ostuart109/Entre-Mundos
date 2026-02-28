@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_fim",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_fim",
+  "parent":{
+    "name":"FIM",
+    "path":"folders/Scripts/FIM.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
