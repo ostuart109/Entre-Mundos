@@ -36,4 +36,3 @@ if (global.interagiu_cofre and place_meeting(x, y, inst_4F09BD94)) {
     global.lembrou_senha = true;
 }
 
-show_debug_message(global.interagiu_cofre)
