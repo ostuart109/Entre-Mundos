@@ -1,11 +1,11 @@
-ativacao_por_toque = false
 destruir_npc = false
+ativacao_por_toque = false
 
 //Estrutura do dialogo
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["Tantos livros...", "Eu não devo ter lido nem 5 deles."],
+	texto	: ["As vezes sinto que o meu lugar é ai dentro."],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto

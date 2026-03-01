@@ -201,6 +201,7 @@
     {"id":{"name":"spr_text_box","path":"sprites/spr_text_box/spr_text_box.yy",},},
     {"id":{"name":"spr_transicao","path":"sprites/spr_transicao/spr_transicao.yy",},},
     {"id":{"name":"spr_tv","path":"sprites/spr_tv/spr_tv.yy",},},
+    {"id":{"name":"spr_ursinho","path":"sprites/spr_ursinho/spr_ursinho.yy",},},
     {"id":{"name":"spr_urso","path":"sprites/spr_urso/spr_urso.yy",},},
   ],
   "resourceType":"GMProject",

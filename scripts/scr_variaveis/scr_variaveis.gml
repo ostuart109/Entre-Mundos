@@ -23,3 +23,8 @@ global.tem_desentupidor = false
 global.visitou_cozinha = false
 
 //========================================================
+
+//Cofre
+global.lembrou_senha = false
+global.pegou_chave_porao = false
+global.interagiu_cofre = false

@@ -18,6 +18,16 @@ libera_porta = function()
 		//Destruindo dialogo da poça
 		instance_destroy(inst_1CE3715E); 
 	}
+	
+	if global.pegou_chave_porao
+	{
+	
+	//Destruindo a barreira do porão
+	instance_destroy(inst_5FF36675)
+	
+	
+	}
+	
 }
 
 

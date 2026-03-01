@@ -27,7 +27,13 @@ nome_da_room() ;
 #endregion
 
 //Fazendo ele só limpar a a agua da pia ao colidir com ela
-if (global.tem_desentupidor && place_meeting(x, y, inst_632F6F81)) {
+if (global.tem_desentupidor and place_meeting(x, y, inst_632F6F81)) {
     global.usou_desentupidor = true;
 }
 
+//Fazendo ele lembrar a senha após inspecionar o cofre e ver a lapide
+if (global.interagiu_cofre and place_meeting(x, y, inst_4F09BD94)) {
+    global.lembrou_senha = true;
+}
+
+show_debug_message(global.interagiu_cofre)

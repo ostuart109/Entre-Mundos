@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_urso",
-    "path":"sprites/spr_urso/spr_urso.yy",
+    "name":"spr_ursinho",
+    "path":"sprites/spr_ursinho/spr_ursinho.yy",
   },
   "spriteMaskId":null,
   "visible":true,

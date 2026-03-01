@@ -10,7 +10,7 @@ image_index = 0 ;
 //Abrindo Cofre
 cofre_abre	= function()
 {
-	if (keyboard_check_released(vk_space))
+	if global.pegou_chave_porao == true
 	{
 		image_index = 1 ;
 	}
