@@ -206,4 +206,61 @@ inicia_jogo		= function(_dados)
 	//Ele inicia o jogo com as informações dos dados
 }
 
+//efeito salvando
+efeito_salvando	= function()
+{
+	if (mostrar_salvando)
+	{
+	    timer_salvando -= 1;
+
+	    // Fade out no último segundo (60 frames)
+	    if (timer_salvando < 60)
+	        texto_alpha = timer_salvando / 60;
+	    else
+	        texto_alpha = 1;
+
+	    if (timer_salvando <= 0)
+	    {
+	        mostrar_salvando = false;
+	        texto_alpha      = 1; // reseta pro próximo save
+	    }
+	}
+}
+
+//Desenha o Salvando...
+desenha_salvando	= function()
+{
+	if (mostrar_salvando)
+	{
+		if (texto_alpha > 0)
+		{
+			draw_set_alpha(texto_alpha);
+			draw_set_font(fnt_aviso) ;
+		    draw_set_color(c_white);
+		    draw_set_halign(fa_right);
+		    draw_set_valign(fa_bottom);
+		    draw_text(display_get_gui_width() - 16, display_get_gui_height() - 16, salva_texto);
+		    // Resetando
+		    draw_set_halign(fa_left);
+		    draw_set_valign(fa_top);
+			draw_set_font(-1) ;
+			draw_set_color(c_white);
+			draw_set_alpha(1);
+		}
+	}
+}
+
+//======================= TELA CHEIA =====================
+
+//Deixando em tela cheia
+tela_cheia	= function()
+{
+	if (keyboard_check_pressed(vk_f11))
+	{
+		window_set_fullscreen(!window_get_fullscreen());
+	}
+}
+
+//========================================================
+
 #endregion

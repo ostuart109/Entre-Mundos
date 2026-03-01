@@ -1,24 +1,8 @@
 draw_self() ;
 
-//Fonte
-draw_set_font(fnt_saves) ;
+#region Usando Métodos
 
-var _marg	= 10 ;
-var _x		= x + _marg ;
-var _y		= y + _marg ;
+//Desenhando botão
+desenha_botao() ;
 
-//Cor
-draw_set_colour(c_white) ;
-	
-//Save
-draw_text(_x, _y, "SAVE 0" + string(meu_save)) ;
-
-//Próximo texto deve variar entre new game ou continue
-var _texto2	= meus_dados != false ? "CONTINUAR" : "NOVO JOGO" ; 
-
-//Texto 2
-draw_text(_x, _y + 20, _texto2) ;
-
-//Resetando
-draw_set_font(-1) ;
-draw_set_colour(c_white) ;
+#endregion

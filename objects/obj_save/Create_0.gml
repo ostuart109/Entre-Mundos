@@ -1,4 +1,6 @@
 
+#region Iniciando Variáveis
+
 //Salvando a posição inicial do meu x
 meu_x_inicial			= 350 ;
 
@@ -18,7 +20,12 @@ global.iniciou	= false ;
 //Numerando save
 meu_save = instance_number(obj_save) ;
 
-meu_efeito = function()
+#endregion
+
+#region Iniciando Métodos
+
+//Efeito Botão
+meu_efeito		= function()
 {
 	//Se o mouse está em cima do id do save
 	var _mouse_sobre	= position_meeting(mouse_x, mouse_y, id) ;
@@ -67,8 +74,35 @@ meu_efeito = function()
 	}
 }
 
+//Desenhando a fonte do botão
+desenha_botao	= function()
+{
+	//Fonte
+	draw_set_font(fnt_saves) ;
+
+	var _marg	= 10 ;
+	var _x		= x + _marg ;
+	var _y		= y + _marg ;
+
+	//Cor
+	draw_set_colour(c_white) ;
+	
+	//Save
+	draw_text(_x, _y, "SAVE 0" + string(meu_save)) ;
+
+	//Próximo texto deve variar entre new game ou continue
+	var _texto2	= meus_dados != false ? "CONTINUAR" : "NOVO JOGO" ; 
+
+	//Texto 2
+	draw_text(_x, _y + 20, _texto2) ;
+
+	//Resetando
+	draw_set_font(-1) ;
+	draw_set_colour(c_white) ;
+}
+
 //Pega Save
-pega_save	= function(_save)
+pega_save		= function(_save)
 {
 	//Tentar abrir o arquivo do jogo
 	//Se ele conseguir ele retorna o arquivo
@@ -97,4 +131,6 @@ pega_save	= function(_save)
 	return	_dados ;
 }
 
-meus_dados = pega_save(meu_save) ;
+meus_dados		= pega_save(meu_save) ;
+
+#endregion

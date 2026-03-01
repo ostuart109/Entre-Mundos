@@ -1,3 +1,5 @@
+#region Iniciando váriaveis
+
 //ID fixo do NPC, baseado na posição (não muda entre sessões)
 meu_id = string(x) + "_" + string(y) + "_" + string(room) ;
 
@@ -7,9 +9,6 @@ if (array_contains(global.npcs_destruidos, meu_id))
     instance_destroy() ;
     exit ;
 }
-
-//Text Box
-#region TEXT BOX
 
 //============= Text Box Retangulo Variáveis =============
 
@@ -24,6 +23,13 @@ destruir_npc = true ; // Por padrão, o NPC se destrói após o diálogo.
 
 //=====================	Ultima Cena ======================
 tocou_som = false;
+
+//========================================================
+
+#endregion
+
+//Text Box
+#region TEXT BOX
 
 //=================== Text Box Estrutura =================
 
@@ -121,10 +127,19 @@ dialogo_area = function()
 	}
 }
 
-
-
 //========================================================
 
 #endregion
 
+#region Iniciando Métodos
 
+musica_menu	= function()
+{
+	if (place_meeting(obj_player.x, obj_player.y, inst_9523B54) && !tocou_som)
+	{
+	    audio_play_sound(snd_saves, 10, 0);
+	    tocou_som = true;
+	}	
+}
+
+#endregion

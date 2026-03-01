@@ -257,7 +257,3 @@ anima_fundo = function()
 }
 
 #endregion
-
-
-
-
