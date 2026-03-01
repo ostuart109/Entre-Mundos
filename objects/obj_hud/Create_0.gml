@@ -99,11 +99,19 @@ salva_jogo		= function(_save)
     {
         player :
         {
-            meu_x   : obj_player.x,
-            meu_y   : obj_player.y,
-            rm      : room,
-            dialogo : global.npcs_destruidos,
-            saves   : global.saves_destruidos
+            meu_x				: obj_player.x,
+            meu_y				: obj_player.y,
+            rm					: room,
+            dialogo				: global.npcs_destruidos,
+            saves				: global.saves_destruidos,
+			//Desentupidor
+			usou_desentupidor	: global.usou_desentupidor,
+			tem_desentupidor	: global.tem_desentupidor,
+			visitou_cozinha		: global.visitou_cozinha,
+			//Cofre
+			lembrou_senha		: global.lembrou_senha,
+			pegou_chave_porao	: global.pegou_chave_porao,
+			interagiu_cofre		: global.interagiu_cofre,
         },
     }
     var _string = json_stringify(_dados);
@@ -146,6 +154,16 @@ carrega_jogo	= function(_save)
 	
 	//Salvando a Room
 	room					= _dados.player.rm ;
+	
+	//Desentupidor
+	global.usou_desentupidor  = _dados.player.usou_desentupidor ;
+	global.tem_desentupidor		= _dados.player.tem_desentupidor ;
+	global.visitou_cozinha		= _dados.player.visitou_cozinha	;
+
+	//Cofre
+	global.lembrou_senha		= _dados.player.lembrou_senha ;
+	global.pegou_chave_porao	= _dados.player.pegou_chave_porao ;				
+	global.interagiu_cofre		= _dados.player.interagiu_cofre ;
 }
 
 //Iniciando o jogo

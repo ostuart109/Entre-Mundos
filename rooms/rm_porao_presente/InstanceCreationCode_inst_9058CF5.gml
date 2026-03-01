@@ -1,7 +1,7 @@
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["Tão escuro...", "Lembro de quando ainda tinhamos uma lampa aqui...", "Roubaram até a lampada?"],
+	texto	: ["Tão escuro...", "Lembro de quando ainda tinhamos uma lâmpada aqui...", "Roubaram até a lâmpada?"],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto

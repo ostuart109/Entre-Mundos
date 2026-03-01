@@ -23,7 +23,7 @@ ativacao_por_toque = true ; // Por padrão, ativa ao encostar.
 destruir_npc = true ; // Por padrão, o NPC se destrói após o diálogo.
 
 //=====================	Ultima Cena ======================
-tocou_som = false;
+
 
 //=================== Text Box Estrutura =================
 

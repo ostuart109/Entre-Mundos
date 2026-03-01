@@ -15,11 +15,8 @@ dialogo =
 	txt_vel : 0.3 ,
 	//Som do Texto
 	sound	: [snd_speech, snd_speech, snd_speech]
-
-
-
 }
-	
+
 }
 else
 {

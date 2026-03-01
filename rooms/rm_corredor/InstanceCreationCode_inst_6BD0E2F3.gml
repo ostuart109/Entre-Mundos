@@ -5,7 +5,7 @@ ativacao_por_toque = false
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["O que diabos deveria ser isso?"],
+	texto	: ["O que deveria ser isso?"],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto

@@ -2,11 +2,11 @@
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["Isso!!!", "Eu sabia que era possível viajar entre o passado e o presente!!"],
+	texto	: ["Como isso era lindo!", "Lembro da noite que ia passar [Olhos Famintos] na televisão", "Mesmo estando do lado dos meus pais, Lembro de eu morrer de medo assistindo", "bons tempos..."],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto
 	txt_vel : 0.3 ,
 	//Som do Texto
-	sound	: [snd_speech, snd_speech]
+	sound	: [snd_speech, snd_speech, snd_speech, snd_speech]
 }

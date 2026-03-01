@@ -36,5 +36,5 @@
     "path":"sprites/spr_papo/spr_papo.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

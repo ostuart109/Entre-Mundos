@@ -35,5 +35,5 @@
     "path":"sprites/spr_save_colisao/spr_save_colisao.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
