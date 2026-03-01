@@ -1,12 +1,10 @@
-ativacao_por_toque = false; 
-destruir_npc = false; 
-
+ativacao_por_toque = false
 
 //Estrutura do dialogo
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["Eu não sou doido de pisar nisso ai.", "Se eu quiser passar, preciso me livrar dessa água."],
+	texto	: ["Demon Hunters! Esse jogo era irado", "Eu deveria rejogar ele quando voltar pra casa."],
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto

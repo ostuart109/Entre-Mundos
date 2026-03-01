@@ -1,8 +1,10 @@
+ativacao_por_toque = false
+
 //Estrutura do dialogo
 dialogo = 
 {
 	//Texto do dialogo
-	texto	: ["Parece que a pia entupiu...", "Não vou deixar minha antiga casa nesse estado", "Compensa pegar uma coisa pra desentupir isso, mas aquele microondas me preocupa."],
+	texto	: ["O cofre...", "Meu pai colocou ele no meu quarto, mas eu nunca soube o que tinha dentro", "Se eu soubesse a senha..."], 
 	//Sprite de quem ta falandos
 	//sprite	: [spr_text_box, spr_text_box],
 	//Velocidade do Texto
@@ -10,7 +12,3 @@ dialogo =
 	//Som do Texto
 	sound	: [snd_speech, snd_speech, snd_speech]
 }
-
-
-global.visitou_cozinha = true
-

@@ -38,6 +38,7 @@ cor_barra = c_red
 mensagem_tempo_max = game_get_speed(gamespeed_fps) * 1;
 
 mensagem_tempo     = 0;
+mensagem_alpha     = 0;
 
 //====================== Animações =======================
 
@@ -509,11 +510,31 @@ animacao					= function()
 desenha_tempo				= function()
 {
 	//Impedindo o player de viajar onde tem colisão
-    if (mensagem_tempo > 0)
+    if (mensagem_alpha > 0)
     {
-        draw_set_font(fnt_aviso);
-        draw_text(camera_get_view_width(view_camera[0]) / 2 + 30, camera_get_view_height(view_camera[0]) / 2 - 30, "Não posso viajar aqui...");
-        draw_set_font(-1);
+		draw_set_font(fnt_aviso);
+		draw_set_halign(fa_center);
+		
+		var _txt = "Não posso viajar aqui...";
+		var _ww = string_width(_txt);
+		var _hh = string_height(_txt);
+		var _xx = camera_get_view_width(view_camera[0]) / 2;
+		var _yy = camera_get_view_height(view_camera[0]) / 2 - 85;
+		var _padd = 5;
+		
+		// Desenha o retângulo de fundo (centralizado no _xx)
+		draw_set_alpha(mensagem_alpha * 0.5);
+		draw_set_color(c_black);
+		draw_rectangle(_xx - (_ww/2) - _padd, _yy - _padd, _xx + (_ww/2) + _padd, _yy + _hh + _padd, false);
+		
+		// Desenha o texto
+        draw_set_alpha(mensagem_alpha);
+		draw_set_color(c_white);
+        draw_text(_xx, _yy, _txt);
+      
+		draw_set_font(-1);
+		draw_set_halign(-1);
+        draw_set_alpha(1);
     }
 }
 
@@ -619,7 +640,7 @@ nome_da_room				= function()
 	{
 	    if (place_meeting(x, y, obj_pode_viajar))
 	    {
-	        if (keyboard_check_released(ord("F")) xor keyboard_check_released(vk_space))
+	        if (keyboard_check_released(ord("F")))
 	        {
 	            mensagem_tempo = mensagem_tempo_max;
 	        }
@@ -628,7 +649,12 @@ nome_da_room				= function()
 	    if (mensagem_tempo > 0)
 	    {
 	        mensagem_tempo--;
+            mensagem_alpha = min(mensagem_alpha + 0.05, 1);
 	    }
+        else
+        {
+            mensagem_alpha = max(mensagem_alpha - 0.05, 0);
+        }
 	}	
 }
 
