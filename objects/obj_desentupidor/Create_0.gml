@@ -1,3 +1,9 @@
+if (global.tem_desentupidor)
+{
+	instance_destroy() ;
+	exit ;
+}
+
 #region Iniciando Métodos
 
 //Desentupindo a pia

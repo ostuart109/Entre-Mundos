@@ -1,5 +1,5 @@
-destruir_npc = false
-ativacao_por_toque = false
+destruir_npc = true
+ativacao_por_toque = true
 
 //Estrutura do dialogo
 dialogo = 

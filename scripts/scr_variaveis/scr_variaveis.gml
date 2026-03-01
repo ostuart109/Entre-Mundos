@@ -28,3 +28,8 @@ global.visitou_cozinha = false
 global.lembrou_senha = false
 global.pegou_chave_porao = false
 global.interagiu_cofre = false
+
+//====================== PORÃO ===========================
+
+// Controla se a música já foi ativada no porão
+global.musica_porao_tocando = false

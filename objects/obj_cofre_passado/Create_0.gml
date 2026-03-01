@@ -1,7 +1,9 @@
 #region Iniciando Variáveis
 
 //Começa fechado
-image_index = 0 ;
+//Começa fechado, mas se o player já pegou a chave ele abre
+if (global.pegou_chave_porao) image_index = 1 ;
+else image_index = 0 ;
 
 #endregion
 

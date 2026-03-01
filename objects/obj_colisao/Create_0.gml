@@ -1,5 +1,5 @@
 #region Criando Métodos
-tocou_som = false;
+
 //Libera a cozinha se já desentupiu
 libera_porta = function()
 {
