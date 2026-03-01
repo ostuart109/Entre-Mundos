@@ -1,3 +1,3 @@
 dest_room = rm_corredor;
-dest_x    = 456;
-dest_y    = 132;
+dest_x    = 557;
+dest_y    = 295;
