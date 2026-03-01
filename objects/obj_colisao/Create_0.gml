@@ -1,6 +1,6 @@
 #region Criando Métodos
 
-//Libera a porta se já desentupiu
+//Libera a cozinha se já desentupiu
 libera_porta = function()
 {
 	// Step do objeto parede
@@ -11,7 +11,15 @@ libera_porta = function()
 		
 		//Destruindo o objeto parede da porta do presente
 		instance_destroy(inst_2F1BA97E);
+		
+		//Destruindo o objeto de colisão da agua eletrica
+		instance_destroy(inst_1D526791);
+		
+		//Destruindo dialogo da poça
+		instance_destroy(inst_1CE3715E); 
 	}
 }
+
+
 
 #endregion

@@ -1,4 +1,4 @@
-global.usou_desentupidor = true
+//global.usou_desentupidor = true
 
 //if global.usou_desentupidor
 //{

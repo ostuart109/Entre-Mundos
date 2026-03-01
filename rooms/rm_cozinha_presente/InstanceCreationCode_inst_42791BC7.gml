@@ -11,6 +11,3 @@ dialogo =
 	sound	: [snd_speech, snd_speech, snd_speech]
 }
 
-
-global.visitou_cozinha = true
-

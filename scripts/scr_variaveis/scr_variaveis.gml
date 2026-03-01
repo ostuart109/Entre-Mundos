@@ -20,5 +20,6 @@ global.room_name = ""
 //Usando o desentupidor
 global.usou_desentupidor = false
 global.tem_desentupidor = false
+global.visitou_cozinha = false
 
 //========================================================

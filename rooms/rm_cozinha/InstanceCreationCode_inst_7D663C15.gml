@@ -1,28 +1,11 @@
 ativacao_por_toque = false; 
+destruir_npc = false;
 
-if global.usou_desentupidor
-{
-	dialogo = 
-	{
-		//Texto do dialogo
-		texto	: ["Agora sim posso passar!"],
-		//Sprite de quem ta falandos
-		//sprite	: [spr_text_box, spr_text_box],
-		//Velocidade do Texto
-		txt_vel : 0.3 ,
-		//Som do Texto
-		sound	: [snd_speech]
-	}
-}
-else
-{
-	destruir_npc = false;
-	
 	//Estrutura do dialogo
 	dialogo = 
 	{
 		//Texto do dialogo
-		texto	: ["..."],
+		texto	: ["...Tá trancada"],
 		//Sprite de quem ta falandos
 		//sprite	: [spr_text_box, spr_text_box],
 		//Velocidade do Texto
@@ -30,4 +13,3 @@ else
 		//Som do Texto
 		sound	: [snd_speech]
 	}
-}
